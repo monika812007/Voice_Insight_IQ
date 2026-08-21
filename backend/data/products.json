@@ -1,0 +1,166 @@
+[
+  {
+    "id": "prod_iphone16_128gb",
+    "canonical_name": "Apple iPhone 16 (128 GB) - Black",
+    "brand": "Apple",
+    "model": "iPhone 16",
+    "category": "Smartphones",
+    "description": "Apple iPhone 16 features A18 Bionic Chip, Camera Control, 48MP Fusion Camera, and Super Retina XDR OLED display.",
+    "image_url": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600&auto=format&fit=crop&q=80",
+    "specs": {
+      "storage": "128 GB",
+      "ram": "8 GB",
+      "display": "6.1 inch OLED",
+      "processor": "Apple A18",
+      "color": "Black",
+      "camera": "48 MP + 12 MP"
+    }
+  },
+  {
+    "id": "prod_samsung_s25",
+    "canonical_name": "Samsung Galaxy S25 5G (256 GB) - Titanium Gray",
+    "brand": "Samsung",
+    "model": "Galaxy S25",
+    "category": "Smartphones",
+    "description": "Samsung Galaxy S25 with Snapdragon 8 Gen 4, Galaxy AI features, Dynamic AMOLED 2X 120Hz display, and 50MP Pro-grade camera.",
+    "image_url": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=600&auto=format&fit=crop&q=80",
+    "specs": {
+      "storage": "256 GB",
+      "ram": "12 GB",
+      "display": "6.2 inch AMOLED 120Hz",
+      "processor": "Snapdragon 8 Gen 4",
+      "color": "Titanium Gray",
+      "camera": "50 MP + 12 MP + 10 MP"
+    }
+  },
+  {
+    "id": "prod_sony_xm5",
+    "canonical_name": "Sony WH-1000XM5 Wireless Noise Canceling Headphones",
+    "brand": "Sony",
+    "model": "WH-1000XM5",
+    "category": "Audio",
+    "description": "Industry-leading noise canceling with two processors and 8 microphones, 30-hour battery life, and crystal-clear hands-free calling.",
+    "image_url": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600&auto=format&fit=crop&q=80",
+    "specs": {
+      "type": "Over-Ear Wireless",
+      "battery_life": "30 Hours",
+      "noise_cancellation": "Auto NC Optimizer",
+      "color": "Silver / Black",
+      "weight": "250g"
+    }
+  },
+  {
+    "id": "prod_hp_pavilion15",
+    "canonical_name": "HP Pavilion 15 Core i7 13th Gen Laptop (16GB/512GB SSD/Win 11)",
+    "brand": "HP",
+    "model": "Pavilion 15",
+    "category": "Laptops",
+    "description": "HP Pavilion 15 powered by 13th Gen Intel Core i7, 16GB DDR4 RAM, 512GB NVMe SSD, 15.6 inch FHD IPS anti-glare display, Audio by B&O.",
+    "image_url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&auto=format&fit=crop&q=80",
+    "specs": {
+      "processor": "Intel Core i7-1355U",
+      "ram": "16 GB DDR4",
+      "storage": "512 GB NVMe SSD",
+      "display": "15.6 inch FHD IPS",
+      "os": "Windows 11 Home",
+      "graphics": "Intel Iris Xe"
+    }
+  },
+  {
+    "id": "prod_samsung_tv55",
+    "canonical_name": "Samsung 55 inch Crystal 4K Vivid Pro Ultra HD Smart TV",
+    "brand": "Samsung",
+    "model": "Crystal 4K 55\"",
+    "category": "Televisions",
+    "description": "Samsung 55 inch 4K Smart TV featuring Crystal Processor 4K, HDR10+, PurColor, Motion Xcelerator, and Tizen OS with Voice Assistant.",
+    "image_url": "https://images.unsplash.com/photo-1593784991095-a205069470b6?w=600&auto=format&fit=crop&q=80",
+    "specs": {
+      "screen_size": "55 inch",
+      "resolution": "4K Ultra HD (3840 x 2160)",
+      "display_tech": "Crystal UHD",
+      "refresh_rate": "60 Hz",
+      "smart_features": "Tizen OS, Alexa Built-in",
+      "audio": "20W 2CH"
+    }
+  },
+  {
+    "id": "prod_levis_tshirt",
+    "canonical_name": "Levi's Men's Graphic Crew Neck T-Shirt",
+    "brand": "Levi's",
+    "model": "Graphic Crew Tee",
+    "category": "Fashion & Apparel",
+    "description": "Levi's classic crew-neck graphic T-shirt made from 100% soft cotton with iconic branding. Available in multiple colors and sizes. Machine washable, premium pre-shrunk cotton.",
+    "image_url": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&auto=format&fit=crop&q=80",
+    "specs": {
+      "material": "100% Cotton",
+      "fit": "Regular Fit",
+      "neck": "Crew Neck",
+      "sleeve": "Short Sleeve",
+      "care": "Machine Wash"
+    }
+  },
+  {
+    "id": "prod_levis_501",
+    "canonical_name": "Levi's 501 Original Fit Men's Jeans - Dark Indigo",
+    "brand": "Levi's",
+    "model": "501 Original Fit",
+    "category": "Fashion & Apparel",
+    "description": "The original straight-leg jean since 1873. Button fly, sits at waist, straight through hip, thigh and leg opening. Made with authentic denim.",
+    "image_url": "https://images.unsplash.com/photo-1542272454315-4c01d7abdf4a?w=600&auto=format&fit=crop&q=80",
+    "specs": {
+      "fit": "Original Straight",
+      "rise": "High Rise",
+      "fabric": "Denim",
+      "closure": "Button Fly",
+      "color": "Dark Indigo"
+    }
+  },
+  {
+    "id": "prod_nike_air_force1",
+    "canonical_name": "Nike Air Force 1 '07 Low Men's Sneakers - White",
+    "brand": "Nike",
+    "model": "Air Force 1 '07",
+    "category": "Footwear & Fashion",
+    "description": "The radically simple, endlessly versatile Nike Air Force 1 with crisp leather upper and foam midsole. An icon since 1982 with timeless all-white style.",
+    "image_url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=80",
+    "specs": {
+      "sole": "Rubber",
+      "upper": "Leather",
+      "closure": "Lace-Up",
+      "cushioning": "Nike Air",
+      "color": "White"
+    }
+  },
+  {
+    "id": "prod_philips_airfryer",
+    "canonical_name": "Philips Digital Air Fryer HD9252/90 (4.1L)",
+    "brand": "Philips",
+    "model": "HD9252/90",
+    "category": "Home & Kitchen",
+    "description": "Philips Digital Air Fryer uses Rapid Air Technology to fry, bake, grill and roast with up to 90% less fat. 7 preset cooking programs, 1400W.",
+    "image_url": "https://images.unsplash.com/photo-1585515320310-259814833e62?w=600&auto=format&fit=crop&q=80",
+    "specs": {
+      "capacity": "4.1 Litres",
+      "wattage": "1400W",
+      "preset_programs": "7",
+      "temperature_range": "80°C–200°C",
+      "color": "Black"
+    }
+  },
+  {
+    "id": "prod_pet_kitten_food",
+    "canonical_name": "Royal Canin Kitten Dry Food (2 kg) & Care Kit",
+    "brand": "Royal Canin",
+    "model": "Kitten Care Kit",
+    "category": "Pet Supplies",
+    "description": "Royal Canin Kitten Dry Food formulated for kittens up to 12 months. Supports healthy development with optimal protein, DHA for brain development, and antioxidant complex.",
+    "image_url": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600&auto=format&fit=crop&q=80",
+    "specs": {
+      "weight": "2 kg",
+      "life_stage": "Kitten (Up to 12 months)",
+      "key_nutrient": "DHA, Protein 34%",
+      "flavour": "Chicken",
+      "age_range": "0–12 months"
+    }
+  }
+]

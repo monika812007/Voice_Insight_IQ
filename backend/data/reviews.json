@@ -1,0 +1,110 @@
+{
+  "prod_iphone16_128gb": {
+    "summary": "Most customers praise the smooth A18 performance, camera control key, and exceptional battery life. Minor complaints mention minimal design changes from iPhone 15 and packaging simplicity.",
+    "sentiment_breakdown": {
+      "positive_percent": 82,
+      "neutral_percent": 11,
+      "negative_percent": 7
+    },
+    "positives": ["Excellent A18 speed", "Outstanding battery life", "Tactile Camera Control button", "Bright OLED Display"],
+    "negatives": ["60Hz refresh rate display", "Minimal aesthetic overhaul", "No charger in box"],
+    "neutrals": ["Camera control takes 1-2 days of practice"],
+    "sample_reviews": [
+      {
+        "id": "rev_1",
+        "author": "Rahul S.",
+        "rating": 5,
+        "sentiment": "positive",
+        "date": "2026-08-10",
+        "text": "Upgraded from iPhone 12. Battery life easily lasts 1.5 days! The camera control button is super helpful for quick snapshots.",
+        "verified": true
+      },
+      {
+        "id": "rev_2",
+        "author": "Priya M.",
+        "rating": 4,
+        "sentiment": "positive",
+        "date": "2026-08-04",
+        "text": "Great phone overall. Fast delivery on Amazon. Only downside is 60Hz display at this price tag.",
+        "verified": true
+      },
+      {
+        "id": "rev_3",
+        "author": "Vikram K.",
+        "rating": 3,
+        "sentiment": "neutral",
+        "date": "2026-07-28",
+        "text": "Decent upgrade if coming from iPhone 13 or older, but very similar to iPhone 15.",
+        "verified": false
+      }
+    ]
+  },
+  "prod_samsung_s25": {
+    "summary": "Users love the titanium feel, blazing Snapdragon 8 Gen 4 speed, and Galaxy AI live translate features. Some users note the phone runs warm during heavy gaming.",
+    "sentiment_breakdown": {
+      "positive_percent": 86,
+      "neutral_percent": 9,
+      "negative_percent": 5
+    },
+    "positives": ["Fluid 120Hz AMOLED display", "Galaxy AI photo tools", "Premium Titanium chassis", "Superb daylight photography"],
+    "negatives": ["Warms up slightly under high gaming load", "Fast charging capped at 25W"],
+    "neutrals": ["One UI 7 layout has a slight learning curve"],
+    "sample_reviews": [
+      {
+        "id": "rev_4",
+        "author": "Amit Sharma",
+        "rating": 5,
+        "sentiment": "positive",
+        "date": "2026-08-12",
+        "text": "The Galaxy AI tools are brilliant! Screen is remarkably bright even under direct outdoor sunlight.",
+        "verified": true
+      }
+    ]
+  },
+  "prod_sony_xm5": {
+    "summary": "Unrivaled active noise cancellation and supreme comfort for long travel sessions. A few users missed the folding hinge mechanism from the previous XM4 model.",
+    "sentiment_breakdown": {
+      "positive_percent": 88,
+      "neutral_percent": 8,
+      "negative_percent": 4
+    },
+    "positives": ["Best-in-class Noise Cancellation", "30-hour battery", "Lightweight ergonomic headband", "Mic clarity on video calls"],
+    "negatives": ["Does not fold into compact pouch", "Pricey"],
+    "neutrals": ["Touch controls are responsive"],
+    "sample_reviews": [
+      {
+        "id": "rev_5",
+        "author": "Kavita R.",
+        "rating": 5,
+        "sentiment": "positive",
+        "date": "2026-08-15",
+        "text": "Perfect for flight travel! Silences engine noise completely. Worth every rupee.",
+        "verified": true
+      }
+    ]
+  },
+  "prod_hp_pavilion15": {
+    "summary": "Excellent productivity laptop with fast 13th Gen Core i7 CPU and B&O speakers. Battery life is moderate (5-6 hours under heavy browsing).",
+    "sentiment_breakdown": {
+      "positive_percent": 79,
+      "neutral_percent": 14,
+      "negative_percent": 7
+    },
+    "positives": ["Powerful i7 Processor", "Crisp FHD screen", "B&O tuned audio", "Sleek aluminum chassis"],
+    "negatives": ["Average battery life", "Webcam is only 720p"],
+    "neutrals": ["Keyboard backlighting has 2 brightness levels"],
+    "sample_reviews": []
+  },
+  "prod_samsung_tv55": {
+    "summary": "Incredible 4K clarity, vibrant colors, and smooth smart TV interface. Sound quality is standard, recommending a soundbar for movie lovers.",
+    "sentiment_breakdown": {
+      "positive_percent": 84,
+      "neutral_percent": 10,
+      "negative_percent": 6
+    },
+    "positives": ["Stunning 4K Crystal display", "Slim bezels", "Tizen OS app speed"],
+    "negatives": ["Built-in speakers lack deep bass"],
+    "neutrals": ["Remote control is solar-powered"],
+    "sample_reviews": []
+  }
+}

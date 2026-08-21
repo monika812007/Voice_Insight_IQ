@@ -1,0 +1,31 @@
+{
+  "prod_iphone16_128gb": [
+    { "date": "2026-07-01", "Amazon": 54999, "Flipkart": 54999, "Croma": 54999 },
+    { "date": "2026-07-15", "Amazon": 52999, "Flipkart": 53499, "Croma": 54999 },
+    { "date": "2026-08-01", "Amazon": 49999, "Flipkart": 51499, "Croma": 52999 },
+    { "date": "2026-08-10", "Amazon": 48999, "Flipkart": 50999, "Croma": 52000 },
+    { "date": "2026-08-18", "Amazon": 46999, "Flipkart": 49999, "Croma": 50500 }
+  ],
+  "prod_samsung_s25": [
+    { "date": "2026-07-01", "Amazon": 79999, "Flipkart": 79999 },
+    { "date": "2026-07-15", "Amazon": 76999, "Flipkart": 77499 },
+    { "date": "2026-08-01", "Amazon": 74999, "Flipkart": 74999 },
+    { "date": "2026-08-18", "Amazon": 71999, "Flipkart": 72499 }
+  ],
+  "prod_sony_xm5": [
+    { "date": "2026-07-01", "Amazon": 29990, "Reliance Digital": 32990 },
+    { "date": "2026-07-20", "Amazon": 26990, "Reliance Digital": 28990 },
+    { "date": "2026-08-10", "Amazon": 24990, "Reliance Digital": 26990 },
+    { "date": "2026-08-18", "Amazon": 22490, "Reliance Digital": 24990 }
+  ],
+  "prod_hp_pavilion15": [
+    { "date": "2026-07-01", "Amazon": 72990, "Croma": 74990 },
+    { "date": "2026-07-20", "Amazon": 68990, "Croma": 70990 },
+    { "date": "2026-08-18", "Amazon": 62990, "Croma": 64500 }
+  ],
+  "prod_samsung_tv55": [
+    { "date": "2026-07-01", "Amazon": 48990, "Flipkart": 49990 },
+    { "date": "2026-07-20", "Amazon": 44990, "Flipkart": 46990 },
+    { "date": "2026-08-18", "Amazon": 39990, "Flipkart": 41990 }
+  ]
+}
