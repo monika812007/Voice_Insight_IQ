@@ -1094,7 +1094,7 @@ export const getStoredTrendingDeals = () => {
   }
 
   deals.sort((a, b) => b.discount_pct - a.discount_pct);
-  return deals.slice(0, 8);
+  return deals;
 };
 
 export const getStoredProductComparison = (productId, priority = "balanced") => {
