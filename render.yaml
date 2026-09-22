@@ -17,22 +17,19 @@ services:
         value: sqlite:///./voice_insight_iq.db
       - key: SUPABASE_URL
         value: https://zyjsolotnqhawtbqgccz.supabase.co
-      - key: SUPABASE_ANON_KEY
-        value: sb_publishable_k7xeCrIFhkI7_G-Y0iWazw_65Wx1Dzn
       - key: SUPABASE_PUBLISHABLE_KEY
-        value: sb_publishable_k7xeCrIFhkI7_G-Y0iWazw_65Wx1Dzn
+        sync: false
       - key: SERPAPI_API_KEY
-        value: 9e064ab04ce28bae119d8ee27a46b345b1368937fd1de9d6757737936a312858
+        sync: false
       - key: DATAFORSEO_LOGIN
-        value: monikamail2006@gmail.com
+        sync: false
       - key: DATAFORSEO_PASSWORD
-        value: 00619e3e6946ee29
+        sync: false
 
   # Frontend React Static Site
   - type: web
     name: voice-insight-iq-frontend
     runtime: static
-    region: oregon
     plan: free
     rootDir: frontend
     buildCommand: npm install && npm run build
@@ -42,9 +39,9 @@ services:
         source: /*
         destination: /index.html
     envVars:
+      - key: VITE_API_BASE_URL
+        sync: false
       - key: VITE_SUPABASE_URL
         value: https://zyjsolotnqhawtbqgccz.supabase.co
-      - key: VITE_SUPABASE_ANON_KEY
-        value: sb_publishable_k7xeCrIFhkI7_G-Y0iWazw_65Wx1Dzn
       - key: VITE_SUPABASE_PUBLISHABLE_KEY
-        value: sb_publishable_k7xeCrIFhkI7_G-Y0iWazw_65Wx1Dzn
+        sync: false
