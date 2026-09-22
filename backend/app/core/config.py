@@ -12,6 +12,7 @@ class Settings(BaseSettings):
     DATABASE_URL: str = "sqlite:///./voice_insight_iq.db"
     SUPABASE_URL: str = ""
     SUPABASE_ANON_KEY: str = ""
+    SUPABASE_PUBLISHABLE_KEY: str = ""
     SUPABASE_SERVICE_ROLE_KEY: str = ""
     ECOMMERCE_API_KEY: str = ""
     ECOMMERCE_API_SECRET: str = ""

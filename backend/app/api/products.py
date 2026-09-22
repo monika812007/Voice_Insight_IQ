@@ -5,7 +5,7 @@ from sqlalchemy import or_
 from sqlalchemy.orm import Session
 
 from app.core.database import get_db
-from app.models import ExternalOffer, Listing, Platform, Product
+from app.models import ExternalOffer, Listing, Platform, Product, SearchCache
 from app.services.product_service import build_paginated_response, normalize_external_offer_for_response, normalize_listing_for_response, normalize_product_for_response, product_search_matches
 from app.services.recommendation_engine import recommendation_engine
 
@@ -50,12 +50,64 @@ async def get_product_detail(
 ):
     product = db.query(Product).filter(Product.id == product_id).first()
     if not product:
+        offer = db.query(ExternalOffer).filter(
+            or_(
+                ExternalOffer.id == product_id,
+                ExternalOffer.external_product_id == product_id,
+                ExternalOffer.offer_key == product_id,
+            )
+        ).first()
+        if offer:
+            product = db.query(Product).filter(Product.id == offer.product_id).first()
+        else:
+            listing = db.query(Listing).filter(
+                or_(
+                    Listing.id == product_id,
+                    Listing.external_product_id == product_id,
+                )
+            ).first()
+            if listing:
+                product = db.query(Product).filter(Product.id == listing.product_id).first()
+
+    if not product:
+        # Check SearchCache for external product
+        for cache_entry in db.query(SearchCache).all():
+            payload = cache_entry.payload or {}
+            for item in payload.get("candidate_products", []) or payload.get("products", []):
+                if item.get("id") == product_id or item.get("product_id") == product_id:
+                    from app.services.search_service import search_service
+                    persisted = search_service.cache_external_products(db, [{
+                        "id": item.get("id"),
+                        "title": item.get("title") or item.get("canonical_name"),
+                        "price": item.get("price") or item.get("extractedPrice"),
+                        "original_price": item.get("oldPrice"),
+                        "currency": item.get("currency"),
+                        "source": item.get("store") or item.get("source") or "Online Store",
+                        "rating": item.get("rating"),
+                        "review_count": item.get("reviews") or item.get("review_count"),
+                        "image": item.get("image") or item.get("image_url"),
+                        "product_url": item.get("productUrl") or item.get("product_url"),
+                        "provider_product_token": item.get("providerProductToken") or item.get("provider_product_token"),
+                        "source_product_id": item.get("sourceProductId"),
+                        "availability": item.get("availability"),
+                        "seller": item.get("seller"),
+                        "shipping": item.get("shipping"),
+                        "last_updated": item.get("lastUpdated") or __import__('datetime').datetime.now(__import__('datetime').timezone.utc).isoformat(),
+                    }])
+                    persisted_id = persisted.get(item.get("id"))
+                    if persisted_id:
+                        product = db.query(Product).filter(Product.id == persisted_id).first()
+                    break
+            if product:
+                break
+
+    if not product:
         raise HTTPException(status_code=404, detail="Product not found.")
 
     listings = (
         db.query(Listing, Platform)
         .join(Platform, Platform.id == Listing.platform_id)
-        .filter(Listing.product_id == product_id)
+        .filter(Listing.product_id == product.id)
         .all()
     )
 
@@ -66,7 +118,7 @@ async def get_product_detail(
     external_offers = (
         db.query(ExternalOffer, Platform)
         .join(Platform, Platform.id == ExternalOffer.merchant_id)
-        .filter(ExternalOffer.product_id == product_id)
+        .filter(ExternalOffer.product_id == product.id)
         .all()
     )
     if external_offers:
@@ -110,7 +162,7 @@ async def get_product_detail(
         db.query(Product, ExternalOffer, Platform)
         .join(ExternalOffer, ExternalOffer.product_id == Product.id)
         .join(Platform, Platform.id == ExternalOffer.merchant_id)
-        .filter(Product.id != product_id)
+        .filter(Product.id != product.id)
         .filter(Product.category == product.category if product.category else Product.brand == product.brand)
         .filter(or_(ExternalOffer.product_url.isnot(None), ExternalOffer.provider_product_token.isnot(None)))
         .order_by(ExternalOffer.last_updated.desc())

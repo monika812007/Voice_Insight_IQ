@@ -16,7 +16,7 @@ from app.models import ExternalOffer, Listing, Platform, Product, SearchCache
 from app.providers.dataforseo_provider import dataforseo_provider
 from app.providers.serpapi_provider import serpapi_provider
 from app.services.product_matcher import product_matcher
-from app.services.product_service import normalize_listing_for_response, normalize_product_for_response
+from app.services.product_service import normalize_listing_for_response, normalize_product_for_response, product_search_matches
 from app.services.recommendation_engine import recommendation_engine
 
 logger = logging.getLogger(__name__)
@@ -102,8 +102,9 @@ class SearchService:
 
     @staticmethod
     def _public_external_product(item: Dict[str, Any]) -> Dict[str, Any]:
+        prod_id = item.get("persisted_product_id") or item["id"]
         return {
-            "id": item["id"],
+            "id": prod_id,
             "title": item["title"],
             "canonical_name": item["title"],
             "price": item.get("price"),
@@ -122,7 +123,7 @@ class SearchService:
             "provider_product_token": item.get("provider_product_token"),
             "provider": item.get("provider"),
             "source": item.get("source"),
-            "product_id": item.get("persisted_product_id"),
+            "product_id": prod_id,
             "direct_product_url_available": bool(item.get("product_url")),
             "sourceProductId": item.get("source_product_id"),
             "availability": item.get("availability"),
@@ -197,7 +198,7 @@ class SearchService:
             offer_key = hashlib.sha256(f"{product.id}:{platform.id}:{self._source_api(item)}:{offer_identity}".encode('utf-8')).hexdigest()
             offer = db.query(ExternalOffer).filter(ExternalOffer.offer_key == offer_key).first()
             if not offer:
-                offer = ExternalOffer(id=f"offer_{offer_key[:24]}", offer_key=offer_key, product_id=product.id, merchant_id=platform.id, source_api=self._source_api(item))
+                offer = ExternalOffer(id=item.get("id") or f"offer_{offer_key[:24]}", offer_key=offer_key, product_id=product.id, merchant_id=platform.id, source_api=self._source_api(item))
                 db.add(offer)
             offer.price = item.get('price')
             offer.currency = item.get('currency')
@@ -408,6 +409,13 @@ class SearchService:
             self._store_search_cache(db, clean_query, page, response)
             return response
 
+        # Fallback to local database catalog if external providers returned no results
+        if db:
+            db_fallback = self._search_database_fallback(db, clean_query, page, intent)
+            if db_fallback:
+                logger.info("[Search] Query: %s | DB Fallback Results: %d", clean_query, db_fallback["count"])
+                return db_fallback
+
         logger.info("[Search] Query: %s | Results: 0 | Normalized: 0", clean_query)
         return {
             "query": clean_query,
@@ -425,11 +433,138 @@ class SearchService:
             "providerErrors": provider_errors,
         }
 
-    async def get_suggestions(self, query: str) -> List[str]:
+    def _search_database_fallback(
+        self,
+        db: Session,
+        query: str,
+        page: int = 1,
+        intent: Optional[Dict[str, Any]] = None,
+    ) -> Optional[Dict[str, Any]]:
+        if not db:
+            return None
+        all_products = db.query(Product).order_by(Product.created_at.desc()).all()
+        matched = [p for p in all_products if product_search_matches(p, query)]
+        if not matched:
+            return None
+
+        intent = intent or product_matcher.extract_specs_from_query(query)
+        page_size = settings.SHOPPING_PAGE_SIZE
+        start_idx = (page - 1) * page_size
+        paged_products = matched[start_idx : start_idx + page_size]
+        has_more = len(matched) > (start_idx + page_size)
+
+        candidate_products = []
+        sources = set()
+        for p in paged_products:
+            offers = (
+                db.query(ExternalOffer, Platform)
+                .join(Platform, Platform.id == ExternalOffer.merchant_id)
+                .filter(ExternalOffer.product_id == p.id)
+                .all()
+            )
+            listings = (
+                db.query(Listing, Platform)
+                .join(Platform, Platform.id == Listing.platform_id)
+                .filter(Listing.product_id == p.id)
+                .all()
+            )
+
+            price = None
+            old_price = None
+            store_name = "Amazon"
+            rating = 4.5
+            review_count = 100
+            product_url = ""
+            token = None
+            image = p.image_url
+
+            if offers:
+                best_offer, best_platform = offers[0]
+                price = best_offer.price
+                store_name = best_platform.name
+                rating = best_offer.rating or 4.5
+                review_count = best_offer.review_count or 100
+                product_url = best_offer.product_url or ""
+                token = best_offer.provider_product_token
+                image = best_offer.image_url or p.image_url
+            elif listings:
+                best_listing, best_platform = listings[0]
+                price = best_listing.offer_price or best_listing.price
+                old_price = best_listing.original_price
+                store_name = best_platform.name
+                rating = best_listing.rating or 4.5
+                review_count = best_listing.review_count or 100
+                product_url = best_listing.product_url or ""
+                image = p.image_url
+
+            sources.add(store_name)
+            candidate_products.append({
+                "id": p.id,
+                "title": p.canonical_name,
+                "canonical_name": p.canonical_name,
+                "price": price or 0,
+                "oldPrice": old_price,
+                "currency": settings.CURRENCY_SYMBOL,
+                "extractedPrice": price or 0,
+                "store": store_name,
+                "rating": rating,
+                "reviews": review_count,
+                "review_count": review_count,
+                "image": image,
+                "image_url": image,
+                "productUrl": product_url,
+                "product_url": product_url,
+                "providerProductToken": token,
+                "provider_product_token": token,
+                "provider": "Database Catalog",
+                "source": store_name,
+                "product_id": p.id,
+                "direct_product_url_available": bool(product_url),
+                "sourceProductId": p.id,
+                "availability": True,
+                "seller": store_name,
+                "shipping": "Standard Delivery",
+                "lastUpdated": datetime.now(timezone.utc).isoformat(),
+            })
+
+        comparison = self._comparison_from_db(db, matched[0], intent.get("priority", "balanced"))
+
+        return {
+            "query": query,
+            "count": len(matched),
+            "matched_product": candidate_products[0] if candidate_products else normalize_product_for_response(matched[0]),
+            "parsed_intent": intent,
+            "candidate_products": candidate_products,
+            "comparison": comparison,
+            "products": candidate_products,
+            "totalResults": len(matched),
+            "page": page,
+            "hasMore": has_more,
+            "sources": sorted(sources),
+            "providers": ["Database Catalog"],
+            "providerErrors": [],
+            "providerNotice": None,
+            "lastUpdated": datetime.now(timezone.utc).isoformat(),
+        }
+
+    async def get_suggestions(self, query: str, db: Optional[Session] = None) -> List[str]:
         clean_query = query.strip()
         if len(clean_query) < 2:
             return []
-        return await serpapi_provider.suggestions(clean_query)
+        suggestions = []
+        try:
+            suggestions = await serpapi_provider.suggestions(clean_query)
+        except Exception:
+            pass
+        if not suggestions and db:
+            matching = (
+                db.query(Product.canonical_name)
+                .filter(Product.canonical_name.ilike(f"%{clean_query}%"))
+                .limit(8)
+                .all()
+            )
+            suggestions = [m[0] for m in matching]
+        return suggestions
 
     async def resolve_external_product_url(self, provider_product_token: str, merchant: str, db: Optional[Session] = None) -> Optional[str]:
         product_url = await serpapi_provider.resolve_product_url(provider_product_token, merchant)

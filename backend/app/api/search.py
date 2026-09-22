@@ -51,8 +51,8 @@ async def text_search_get(
     return res
 
 @router.get("/search/suggestions")
-async def search_suggestions(q: str = Query(..., min_length=2)):
-    return {"query": q, "suggestions": await search_service.get_suggestions(q)}
+async def search_suggestions(q: str = Query(..., min_length=2), db: Session = Depends(get_db)):
+    return {"query": q, "suggestions": await search_service.get_suggestions(q, db=db)}
 
 
 @router.post("/search/resolve-product-url")

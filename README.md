@@ -111,9 +111,9 @@ Voice Insight IQ/
 ```bash
 cd backend
 python -m pip install -r requirements.txt
-python -m uvicorn app.main:app --reload --port 8000
+python -m uvicorn app.main:app --reload --port 8001
 ```
-- Backend API Docs: `http://localhost:8000/api/v1/docs`
+- Backend API Docs: `http://localhost:8001/api/v1/docs`
 
 ### 2. Start the React Frontend
 
