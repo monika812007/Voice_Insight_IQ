@@ -38,7 +38,7 @@ export const STORED_PRODUCTS = [
     canonical_name: "Sony WH-1000XM5 Wireless Noise Canceling Headphones",
     brand: "Sony",
     model: "WH-1000XM5",
-    category: "Audio",
+    category: "Headphones & Audio",
     description: "Industry-leading noise canceling with two processors and 8 microphones, 30-hour battery life, and crystal-clear hands-free calling.",
     image_url: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600&auto=format&fit=crop&q=80",
     specs: {
@@ -54,7 +54,7 @@ export const STORED_PRODUCTS = [
     canonical_name: "HP Pavilion 15 Core i7 13th Gen Laptop (16GB/512GB SSD/Win 11)",
     brand: "HP",
     model: "Pavilion 15",
-    category: "Laptops",
+    category: "Laptops & Computers",
     description: "HP Pavilion 15 powered by 13th Gen Intel Core i7, 16GB DDR4 RAM, 512GB NVMe SSD, 15.6 inch FHD IPS anti-glare display, Audio by B&O.",
     image_url: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&auto=format&fit=crop&q=80",
     specs: {
@@ -89,7 +89,7 @@ export const STORED_PRODUCTS = [
     brand: "Levi's",
     model: "Graphic Crew Tee",
     category: "Fashion & Apparel",
-    description: "Levi's classic crew-neck graphic T-shirt made from 100% soft cotton with iconic branding. Available in multiple colors and sizes. Machine washable, premium pre-shrunk cotton.",
+    description: "Levi's classic crew-neck graphic T-shirt made from 100% soft cotton with iconic branding. Available in multiple colors and sizes. Machine washable.",
     image_url: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&auto=format&fit=crop&q=80",
     specs: {
       material: "100% Cotton",
@@ -117,10 +117,10 @@ export const STORED_PRODUCTS = [
   },
   {
     id: "prod_nike_air_force1",
-    canonical_name: "Nike Air Force 1 '07 Low Men's Sneakers - White",
+    canonical_name: "Nike Air Force 1 '07 Low Men's Sneakers & Shoes - White",
     brand: "Nike",
     model: "Air Force 1 '07",
-    category: "Footwear & Fashion",
+    category: "Footwear & Shoes",
     description: "The radically simple, endlessly versatile Nike Air Force 1 with crisp leather upper and foam midsole. An icon since 1982 with timeless all-white style.",
     image_url: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=80",
     specs: {
@@ -129,6 +129,38 @@ export const STORED_PRODUCTS = [
       closure: "Lace-Up",
       cushioning: "Nike Air",
       color: "White"
+    }
+  },
+  {
+    id: "prod_apple_watch_10",
+    canonical_name: "Apple Watch Series 10 (GPS, 46mm) Smartwatch - Jet Black",
+    brand: "Apple",
+    model: "Watch Series 10",
+    category: "Smartwatches & Watches",
+    description: "Apple Watch Series 10 features the biggest, most advanced display yet, faster charging, depth & water temperature sensors, and ECG health tracking.",
+    image_url: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80",
+    specs: {
+      display: "Always-On Retina OLED",
+      case_size: "46mm",
+      connectivity: "GPS + Bluetooth 5.3",
+      water_resistance: "50m",
+      battery: "Up to 18 hours"
+    }
+  },
+  {
+    id: "prod_coffee_mug",
+    canonical_name: "Ceramic Insulated Travel Coffee Mug & Cup (450ml)",
+    brand: "Contigo",
+    model: "Autoseal Travel Mug",
+    category: "Kitchen & Dining",
+    description: "Double-wall vacuum-insulated stainless steel coffee mug keeps drinks hot for 7 hours or cold for 18 hours. Leak-proof and easy to clean.",
+    image_url: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&auto=format&fit=crop&q=80",
+    specs: {
+      capacity: "450 ml",
+      material: "Stainless Steel & Ceramic",
+      insulation: "Vacuum Insulated",
+      lid: "Autoseal Leak-Proof",
+      color: "Matte Black"
     }
   },
   {
@@ -161,6 +193,39 @@ export const STORED_PRODUCTS = [
       key_nutrient: "DHA, Protein 34%",
       flavour: "Chicken",
       age_range: "0–12 months"
+    }
+  },
+  {
+    id: "prod_dell_xps15",
+    canonical_name: "Dell XPS 15 Laptop (Intel Core i9 13th Gen, 32GB RAM, 1TB SSD)",
+    brand: "Dell",
+    model: "XPS 15 9530",
+    category: "Laptops & Computers",
+    description: "Dell XPS 15 with 3.5K OLED InfinityEdge touch display, NVIDIA GeForce RTX 4070, CNC aluminum chassis, and quad-speaker studio sound.",
+    image_url: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&auto=format&fit=crop&q=80",
+    specs: {
+      processor: "Intel Core i9-13900H",
+      ram: "32 GB DDR5",
+      storage: "1 TB NVMe SSD",
+      display: "15.6 inch 3.5K OLED Touch",
+      graphics: "NVIDIA RTX 4070 8GB",
+      os: "Windows 11 Pro"
+    }
+  },
+  {
+    id: "prod_boat_rockerz",
+    canonical_name: "boAt Rockerz 450 Bluetooth On-Ear Headphones with Mic",
+    brand: "boAt",
+    model: "Rockerz 450",
+    category: "Headphones & Audio",
+    description: "boAt Rockerz 450 offers massive 15-hour playback, 40mm dynamic drivers, padded ear cushions, and instant dual pairing.",
+    image_url: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80",
+    specs: {
+      type: "On-Ear Wireless",
+      battery: "15 Hours Playback",
+      driver_size: "40 mm",
+      bluetooth: "v5.0",
+      color: "Luscious Black"
     }
   }
 ];
@@ -547,6 +612,146 @@ export const STORED_LISTINGS = [
     is_affiliate_link: true
   },
   {
+    id: "list_amz_watch10",
+    product_id: "prod_apple_watch_10",
+    platform_name: "Amazon",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    product_url: "https://www.amazon.in/s?k=Apple+Watch+Series+10",
+    seller_name: "Apple Authorized Reseller",
+    seller_rating: 4.8,
+    price: 46900,
+    original_price: 49900,
+    offer_price: 44900,
+    discount: "10%",
+    currency: "₹",
+    rating: 4.7,
+    review_count: 7300,
+    availability: true,
+    checked_at: "2026-08-18T11:50:00Z",
+    is_demo_source: true,
+    is_affiliate_link: true
+  },
+  {
+    id: "list_crm_watch10",
+    product_id: "prod_apple_watch_10",
+    platform_name: "Croma",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Croma_Logo.png",
+    product_url: "https://www.croma.com/searchB?q=Apple+Watch+Series+10",
+    seller_name: "Croma Store",
+    seller_rating: 4.7,
+    price: 47900,
+    original_price: 49900,
+    offer_price: 45900,
+    discount: "8%",
+    currency: "₹",
+    rating: 4.6,
+    review_count: 4200,
+    availability: true,
+    checked_at: "2026-08-18T11:35:00Z",
+    is_demo_source: true,
+    is_affiliate_link: false
+  },
+  {
+    id: "list_amz_mug",
+    product_id: "prod_coffee_mug",
+    platform_name: "Amazon",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    product_url: "https://www.amazon.in/s?k=Insulated+Travel+Coffee+Mug",
+    seller_name: "Kitchen Essentials Hub",
+    seller_rating: 4.6,
+    price: 1499,
+    original_price: 2499,
+    offer_price: 1199,
+    discount: "52%",
+    currency: "₹",
+    rating: 4.5,
+    review_count: 8600,
+    availability: true,
+    checked_at: "2026-08-18T11:40:00Z",
+    is_demo_source: true,
+    is_affiliate_link: true
+  },
+  {
+    id: "list_fk_mug",
+    product_id: "prod_coffee_mug",
+    platform_name: "Flipkart",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flipkart_logo.svg",
+    product_url: "https://www.flipkart.com/search?q=Insulated+Coffee+Cup+Mug",
+    seller_name: "HomeDecor Superstore",
+    seller_rating: 4.3,
+    price: 1599,
+    original_price: 2499,
+    offer_price: 1299,
+    discount: "48%",
+    currency: "₹",
+    rating: 4.4,
+    review_count: 5100,
+    availability: true,
+    checked_at: "2026-08-18T11:30:00Z",
+    is_demo_source: true,
+    is_affiliate_link: true
+  },
+  {
+    id: "list_amz_dellxps",
+    product_id: "prod_dell_xps15",
+    platform_name: "Amazon",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    product_url: "https://www.amazon.in/s?k=Dell+XPS+15+Laptop",
+    seller_name: "Dell Official Store",
+    seller_rating: 4.9,
+    price: 189990,
+    original_price: 215000,
+    offer_price: 179990,
+    discount: "16%",
+    currency: "₹",
+    rating: 4.7,
+    review_count: 3800,
+    availability: true,
+    checked_at: "2026-08-18T11:55:00Z",
+    is_demo_source: true,
+    is_affiliate_link: true
+  },
+  {
+    id: "list_amz_boat450",
+    product_id: "prod_boat_rockerz",
+    platform_name: "Amazon",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    product_url: "https://www.amazon.in/s?k=boAt+Rockerz+450+Headphones",
+    seller_name: "boAt Official Store",
+    seller_rating: 4.7,
+    price: 1499,
+    original_price: 3990,
+    offer_price: 1299,
+    discount: "67%",
+    currency: "₹",
+    rating: 4.4,
+    review_count: 85200,
+    availability: true,
+    checked_at: "2026-08-18T11:58:00Z",
+    is_demo_source: true,
+    is_affiliate_link: true
+  },
+  {
+    id: "list_fk_boat450",
+    product_id: "prod_boat_rockerz",
+    platform_name: "Flipkart",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flipkart_logo.svg",
+    product_url: "https://www.flipkart.com/search?q=boAt+Rockerz+450",
+    seller_name: "Audio World",
+    seller_rating: 4.5,
+    price: 1599,
+    original_price: 3990,
+    offer_price: 1399,
+    discount: "65%",
+    currency: "₹",
+    rating: 4.3,
+    review_count: 64100,
+    availability: true,
+    checked_at: "2026-08-18T11:45:00Z",
+    is_demo_source: true,
+    is_affiliate_link: true
+  },
+  {
     id: "list_amz_airfryer",
     product_id: "prod_philips_airfryer",
     platform_name: "Amazon",
@@ -631,95 +836,38 @@ export const STORED_LISTINGS = [
 export const STORED_REVIEWS = {
   prod_iphone16_128gb: {
     summary: "Most customers praise the smooth A18 performance, camera control key, and exceptional battery life. Minor complaints mention minimal design changes from iPhone 15 and packaging simplicity.",
-    sentiment_breakdown: {
-      positive_percent: 82,
-      neutral_percent: 11,
-      negative_percent: 7
-    },
+    sentiment_breakdown: { positive_percent: 82, neutral_percent: 11, negative_percent: 7 },
     positives: ["Excellent A18 speed", "Outstanding battery life", "Tactile Camera Control button", "Bright OLED Display"],
     negatives: ["60Hz refresh rate display", "Minimal aesthetic overhaul", "No charger in box"],
     neutrals: ["Camera control takes 1-2 days of practice"],
     sample_reviews: [
-      {
-        id: "rev_1",
-        author: "Rahul S.",
-        rating: 5,
-        sentiment: "positive",
-        date: "2026-08-10",
-        text: "Upgraded from iPhone 12. Battery life easily lasts 1.5 days! The camera control button is super helpful for quick snapshots.",
-        verified: true
-      },
-      {
-        id: "rev_2",
-        author: "Priya M.",
-        rating: 4,
-        sentiment: "positive",
-        date: "2026-08-04",
-        text: "Great phone overall. Fast delivery on Amazon. Only downside is 60Hz display at this price tag.",
-        verified: true
-      },
-      {
-        id: "rev_3",
-        author: "Vikram K.",
-        rating: 3,
-        sentiment: "neutral",
-        date: "2026-07-28",
-        text: "Decent upgrade if coming from iPhone 13 or older, but very similar to iPhone 15.",
-        verified: false
-      }
+      { id: "rev_1", author: "Rahul S.", rating: 5, sentiment: "positive", date: "2026-08-10", text: "Upgraded from iPhone 12. Battery life easily lasts 1.5 days! The camera control button is super helpful for quick snapshots.", verified: true },
+      { id: "rev_2", author: "Priya M.", rating: 4, sentiment: "positive", date: "2026-08-04", text: "Great phone overall. Fast delivery on Amazon. Only downside is 60Hz display at this price tag.", verified: true }
     ]
   },
   prod_samsung_s25: {
     summary: "Users love the titanium feel, blazing Snapdragon 8 Gen 4 speed, and Galaxy AI live translate features. Some users note the phone runs warm during heavy gaming.",
-    sentiment_breakdown: {
-      positive_percent: 86,
-      neutral_percent: 9,
-      negative_percent: 5
-    },
+    sentiment_breakdown: { positive_percent: 86, neutral_percent: 9, negative_percent: 5 },
     positives: ["Fluid 120Hz AMOLED display", "Galaxy AI photo tools", "Premium Titanium chassis", "Superb daylight photography"],
     negatives: ["Warms up slightly under high gaming load", "Fast charging capped at 25W"],
     neutrals: ["One UI 7 layout has a slight learning curve"],
     sample_reviews: [
-      {
-        id: "rev_4",
-        author: "Amit Sharma",
-        rating: 5,
-        sentiment: "positive",
-        date: "2026-08-12",
-        text: "The Galaxy AI tools are brilliant! Screen is remarkably bright even under direct outdoor sunlight.",
-        verified: true
-      }
+      { id: "rev_4", author: "Amit Sharma", rating: 5, sentiment: "positive", date: "2026-08-12", text: "The Galaxy AI tools are brilliant! Screen is remarkably bright even under direct outdoor sunlight.", verified: true }
     ]
   },
   prod_sony_xm5: {
     summary: "Unrivaled active noise cancellation and supreme comfort for long travel sessions. A few users missed the folding hinge mechanism from the previous XM4 model.",
-    sentiment_breakdown: {
-      positive_percent: 88,
-      neutral_percent: 8,
-      negative_percent: 4
-    },
+    sentiment_breakdown: { positive_percent: 88, neutral_percent: 8, negative_percent: 4 },
     positives: ["Best-in-class Noise Cancellation", "30-hour battery", "Lightweight ergonomic headband", "Mic clarity on video calls"],
     negatives: ["Does not fold into compact pouch", "Pricey"],
     neutrals: ["Touch controls are responsive"],
     sample_reviews: [
-      {
-        id: "rev_5",
-        author: "Kavita R.",
-        rating: 5,
-        sentiment: "positive",
-        date: "2026-08-15",
-        text: "Perfect for flight travel! Silences engine noise completely. Worth every rupee.",
-        verified: true
-      }
+      { id: "rev_5", author: "Kavita R.", rating: 5, sentiment: "positive", date: "2026-08-15", text: "Perfect for flight travel! Silences engine noise completely. Worth every rupee.", verified: true }
     ]
   },
   prod_hp_pavilion15: {
     summary: "Excellent productivity laptop with fast 13th Gen Core i7 CPU and B&O speakers. Battery life is moderate (5-6 hours under heavy browsing).",
-    sentiment_breakdown: {
-      positive_percent: 79,
-      neutral_percent: 14,
-      negative_percent: 7
-    },
+    sentiment_breakdown: { positive_percent: 79, neutral_percent: 14, negative_percent: 7 },
     positives: ["Powerful i7 Processor", "Crisp FHD screen", "B&O tuned audio", "Sleek aluminum chassis"],
     negatives: ["Average battery life", "Webcam is only 720p"],
     neutrals: ["Keyboard backlighting has 2 brightness levels"],
@@ -727,14 +875,18 @@ export const STORED_REVIEWS = {
   },
   prod_samsung_tv55: {
     summary: "Incredible 4K clarity, vibrant colors, and smooth smart TV interface. Sound quality is standard, recommending a soundbar for movie lovers.",
-    sentiment_breakdown: {
-      positive_percent: 84,
-      neutral_percent: 10,
-      negative_percent: 6
-    },
+    sentiment_breakdown: { positive_percent: 84, neutral_percent: 10, negative_percent: 6 },
     positives: ["Stunning 4K Crystal display", "Slim bezels", "Tizen OS app speed"],
     negatives: ["Built-in speakers lack deep bass"],
     neutrals: ["Remote control is solar-powered"],
+    sample_reviews: []
+  },
+  prod_apple_watch_10: {
+    summary: "Users love the razor-thin profile, bright edge-to-edge screen, and rapid 30-minute fast charging.",
+    sentiment_breakdown: { positive_percent: 90, neutral_percent: 7, negative_percent: 3 },
+    positives: ["Large wide-angle OLED display", "Fast charging", "Advanced health tracking"],
+    negatives: ["Daily charging still required"],
+    neutrals: ["Jet black finish looks sleek"],
     sample_reviews: []
   }
 };
@@ -777,7 +929,6 @@ export const getStoredTrendingDeals = () => {
     const listings = STORED_LISTINGS.filter(l => l.product_id === product.id);
     if (!listings.length) continue;
 
-    // Pick best deal listing
     const bestListing = listings.reduce((best, cur) => {
       const bestPrice = best.offer_price || best.price;
       const curPrice = cur.offer_price || cur.price;
@@ -805,46 +956,94 @@ export const getStoredTrendingDeals = () => {
     });
   }
 
-  // Sort by highest discount
   deals.sort((a, b) => b.discount_pct - a.discount_pct);
   return deals.slice(0, 8);
 };
 
 export const getStoredProductComparison = (productId, priority = "balanced") => {
   const product = STORED_PRODUCTS.find(p => p.id === productId) || STORED_PRODUCTS[0];
-  const listings = STORED_LISTINGS.filter(l => l.product_id === product.id).map(l => ({
+  let listings = STORED_LISTINGS.filter(l => l.product_id === product.id);
+
+  if (!listings.length) {
+    listings = [
+      {
+        id: `list_amz_${product.id}`,
+        product_id: product.id,
+        platform_name: "Amazon",
+        platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+        product_url: `https://www.amazon.in/s?k=${encodeURIComponent(product.canonical_name)}`,
+        seller_name: "Authorized Store",
+        seller_rating: 4.7,
+        price: 2499,
+        original_price: 3499,
+        offer_price: 2199,
+        discount: "37%",
+        currency: "₹",
+        rating: 4.5,
+        review_count: 5400,
+        availability: true,
+        checked_at: new Date().toISOString()
+      },
+      {
+        id: `list_fk_${product.id}`,
+        product_id: product.id,
+        platform_name: "Flipkart",
+        platform_logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flipkart_logo.svg",
+        product_url: `https://www.flipkart.com/search?q=${encodeURIComponent(product.canonical_name)}`,
+        seller_name: "Retail Partner",
+        seller_rating: 4.4,
+        price: 2699,
+        original_price: 3499,
+        offer_price: 2399,
+        discount: "31%",
+        currency: "₹",
+        rating: 4.4,
+        review_count: 3200,
+        availability: true,
+        checked_at: new Date().toISOString()
+      }
+    ];
+  }
+
+  const normalizedListings = listings.map(l => ({
     ...l,
     title: product.canonical_name,
     image: product.image_url,
     store: l.platform_name,
-    seller: l.seller_name
+    seller: l.seller_name,
+    product_url: l.product_url || `https://www.amazon.in/s?k=${encodeURIComponent(product.canonical_name)}`
   }));
 
-  if (!listings.length) return null;
-
-  // Compute recommendation
-  let bestOption = listings[0];
+  let bestOption = normalizedListings[0];
   if (priority === 'cheapest') {
-    bestOption = listings.reduce((min, cur) => ((cur.offer_price || cur.price) < (min.offer_price || min.price) ? cur : min), listings[0]);
+    bestOption = normalizedListings.reduce((min, cur) => ((cur.offer_price || cur.price) < (min.offer_price || min.price) ? cur : min), normalizedListings[0]);
   } else if (priority === 'best_rated') {
-    bestOption = listings.reduce((max, cur) => (cur.rating > max.rating ? cur : max), listings[0]);
+    bestOption = normalizedListings.reduce((max, cur) => (cur.rating > max.rating ? cur : max), normalizedListings[0]);
   } else {
-    // balanced
-    bestOption = listings.reduce((best, cur) => {
+    bestOption = normalizedListings.reduce((best, cur) => {
       const bestScore = (best.rating * 20) - ((best.offer_price || best.price) / 1000);
       const curScore = (cur.rating * 20) - ((cur.offer_price || cur.price) / 1000);
       return curScore > bestScore ? cur : best;
-    }, listings[0]);
+    }, normalizedListings[0]);
   }
 
-  const prices = listings.map(l => Number(l.offer_price || l.price));
+  bestOption = {
+    ...bestOption,
+    recommendation_type: priority === 'cheapest' ? 'CHEAPEST DEAL' : priority === 'best_rated' ? 'HIGHEST RATED' : 'BALANCED CHOICE',
+    score: Math.min(98, Math.max(85, Math.round(bestOption.rating * 19 + 5))),
+    explanation: `Offers the best overall combination of competitive pricing at ₹${(bestOption.offer_price || bestOption.price).toLocaleString('en-IN')}, high customer satisfaction (${bestOption.rating}★), and fast verified delivery.`
+  };
+
+  const prices = normalizedListings.map(l => Number(l.offer_price || l.price));
   const reviewAnalysis = STORED_REVIEWS[product.id] || {
-    summary: `High customer satisfaction for ${product.canonical_name} across major retail partners.`,
+    summary: `High customer satisfaction for ${product.canonical_name} across major authorized retail partners with high build quality and reliable performance.`,
     sentiment_breakdown: { positive_percent: 85, neutral_percent: 10, negative_percent: 5 },
-    positives: ["High build quality", "Fast delivery", "Competitive pricing"],
-    negatives: ["Limited color availability"],
-    neutrals: ["Standard manufacturer warranty"],
-    sample_reviews: []
+    positives: ["High build quality", "Fast delivery", "Competitive pricing", "Accurate specifications"],
+    negatives: ["Limited color availability in some regions"],
+    neutrals: ["Standard manufacturer warranty applies"],
+    sample_reviews: [
+      { id: "rev_gen_1", author: "Verified Customer", rating: 5, sentiment: "positive", date: "2026-08-10", text: `Great experience with this ${product.canonical_name}. Exactly as described and great value.`, verified: true }
+    ]
   };
 
   const rawHistory = STORED_PRICE_HISTORY[product.id] || [];
@@ -855,37 +1054,39 @@ export const getStoredProductComparison = (productId, priority = "balanced") => 
         merchant: "Amazon"
       }))
     : [
-        { date: "Jul 1", price: prices[0] * 1.15, merchant: "Amazon" },
-        { date: "Jul 20", price: prices[0] * 1.08, merchant: "Amazon" },
-        { date: "Aug 10", price: prices[0] * 1.02, merchant: "Amazon" },
+        { date: "Jul 1", price: Math.round(prices[0] * 1.15), merchant: "Amazon" },
+        { date: "Jul 20", price: Math.round(prices[0] * 1.08), merchant: "Amazon" },
+        { date: "Aug 10", price: Math.round(prices[0] * 1.02), merchant: "Amazon" },
         { date: "Aug 18", price: prices[0], merchant: "Amazon" }
       ];
 
   const related = STORED_PRODUCTS
-    .filter(p => p.id !== product.id && (p.category === product.category || p.brand === product.brand || true))
-    .slice(0, 6)
+    .filter(p => p.id !== product.id)
+    .slice(0, 8)
     .map(p => {
       const pListings = STORED_LISTINGS.filter(l => l.product_id === p.id);
       const first = pListings[0] || {};
       return {
         id: p.id,
+        product_id: p.id,
         canonical_name: p.canonical_name,
+        title: p.canonical_name,
         brand: p.brand,
         category: p.category,
-        price: first.offer_price || first.price || 999,
-        original_price: first.original_price || first.price || 1299,
+        price: first.offer_price || first.price || 1499,
+        original_price: first.original_price || first.price || 1999,
         source: first.platform_name || "Amazon",
         rating: first.rating || 4.5,
         review_count: first.review_count || 100,
         image_url: p.image_url,
-        product_url: first.product_url || ""
+        product_url: first.product_url || `https://www.amazon.in/s?k=${encodeURIComponent(p.canonical_name)}`
       };
     });
 
   return {
     product,
     best_option: bestOption,
-    listings,
+    listings: normalizedListings,
     review_analysis: reviewAnalysis,
     price_history: history,
     lowest_observed_price: Math.min(...prices),
@@ -895,23 +1096,32 @@ export const getStoredProductComparison = (productId, priority = "balanced") => 
 };
 
 export const searchStoredProducts = (query = "", page = 1) => {
-  const clean = (query || "").toLowerCase().trim();
+  const rawQuery = (query || "").trim();
+  const clean = rawQuery.toLowerCase();
   let matchedProducts = STORED_PRODUCTS;
 
   if (clean) {
     const terms = clean.split(/\s+/).filter(Boolean);
-    matchedProducts = STORED_PRODUCTS.filter(p => {
-      const searchTarget = `${p.canonical_name} ${p.brand} ${p.model} ${p.category} ${p.description}`.toLowerCase();
-      return terms.some(term => searchTarget.includes(term));
-    });
+    const scored = STORED_PRODUCTS.map(p => {
+      const target = `${p.canonical_name} ${p.brand} ${p.model} ${p.category} ${p.description}`.toLowerCase();
+      let score = 0;
+      for (const term of terms) {
+        if (target.includes(term)) score += 1;
+        if (p.brand.toLowerCase() === term) score += 3;
+        if (p.category.toLowerCase().includes(term)) score += 2;
+      }
+      return { product: p, score };
+    }).filter(item => item.score > 0);
+
+    if (scored.length > 0) {
+      scored.sort((a, b) => b.score - a.score);
+      matchedProducts = scored.map(s => s.product);
+    } else {
+      matchedProducts = STORED_PRODUCTS;
+    }
   }
 
-  // If no match found, fallback to popular catalog items
-  if (matchedProducts.length === 0) {
-    matchedProducts = STORED_PRODUCTS.slice(0, 6);
-  }
-
-  const pageSize = 10;
+  const pageSize = 12;
   const start = (page - 1) * pageSize;
   const pagedProducts = matchedProducts.slice(start, start + pageSize);
 
@@ -919,7 +1129,7 @@ export const searchStoredProducts = (query = "", page = 1) => {
   const products = [];
   const sources = new Set();
 
-  for (const p of pagedProducts) {
+  for (const p of matchedProducts) {
     const pListings = STORED_LISTINGS.filter(l => l.product_id === p.id);
     const best = pListings[0] || {};
     const price = best.offer_price || best.price || 1999;
@@ -946,11 +1156,11 @@ export const searchStoredProducts = (query = "", page = 1) => {
       source: store,
       image: p.image_url,
       image_url: p.image_url,
-      productUrl: best.product_url || "",
-      product_url: best.product_url || "",
+      productUrl: best.product_url || `https://www.amazon.in/s?k=${encodeURIComponent(p.canonical_name)}`,
+      product_url: best.product_url || `https://www.amazon.in/s?k=${encodeURIComponent(p.canonical_name)}`,
       availability: true,
       seller: best.seller_name || "Official Store",
-      discount: best.discount || "10%"
+      discount: best.discount || "15%"
     };
 
     candidateProducts.push(itemObj);
@@ -961,7 +1171,7 @@ export const searchStoredProducts = (query = "", page = 1) => {
   const comparison = getStoredProductComparison(primaryProduct.id);
 
   return {
-    query,
+    query: rawQuery || primaryProduct.canonical_name,
     count: matchedProducts.length,
     matched_product: primaryProduct,
     candidate_products: candidateProducts,
@@ -977,19 +1187,34 @@ export const searchStoredProducts = (query = "", page = 1) => {
 
 export const getStoredSuggestions = (query = "") => {
   const clean = (query || "").toLowerCase().trim();
-  const suggestions = [
-    "Apple iPhone 16",
-    "Samsung Galaxy S25",
-    "Sony WH-1000XM5 Headphones",
-    "HP Pavilion 15 Laptop",
-    "Samsung 55 inch 4K Smart TV",
-    "Levi's Graphic T-Shirt",
-    "Levi's 501 Original Jeans",
-    "Nike Air Force 1 Sneakers",
-    "Philips Digital Air Fryer",
-    "Royal Canin Kitten Food"
+  const allSuggestions = [
+    { name: "Apple iPhone 16 (128 GB)", category: "Smartphones", brand: "Apple" },
+    { name: "Samsung Galaxy S25 5G", category: "Smartphones", brand: "Samsung" },
+    { name: "Sony WH-1000XM5 Wireless Headphones", category: "Audio", brand: "Sony" },
+    { name: "HP Pavilion 15 Core i7 Laptop", category: "Laptops", brand: "HP" },
+    { name: "Dell XPS 15 OLED Laptop", category: "Laptops", brand: "Dell" },
+    { name: "Samsung 55 inch Crystal 4K Smart TV", category: "Televisions", brand: "Samsung" },
+    { name: "Apple Watch Series 10 Smartwatch", category: "Smartwatches", brand: "Apple" },
+    { name: "Nike Air Force 1 '07 Sneakers", category: "Footwear & Shoes", brand: "Nike" },
+    { name: "Levi's Men's Graphic Crew Neck T-Shirt", category: "Fashion", brand: "Levi's" },
+    { name: "Levi's 501 Original Fit Men's Jeans", category: "Fashion", brand: "Levi's" },
+    { name: "Philips Digital Air Fryer (4.1L)", category: "Home & Kitchen", brand: "Philips" },
+    { name: "Ceramic Insulated Travel Coffee Mug & Cup", category: "Kitchen & Dining", brand: "Contigo" },
+    { name: "Royal Canin Kitten Dry Food & Care Kit", category: "Pet Supplies", brand: "Royal Canin" },
+    { name: "boAt Rockerz 450 Bluetooth Headphones", category: "Audio", brand: "boAt" }
   ];
 
-  if (!clean) return suggestions.slice(0, 5);
-  return suggestions.filter(s => s.toLowerCase().includes(clean)).slice(0, 6);
+  if (!clean) {
+    return allSuggestions.map(s => s.name);
+  }
+
+  const matched = allSuggestions.filter(s =>
+    s.name.toLowerCase().includes(clean) ||
+    s.category.toLowerCase().includes(clean) ||
+    s.brand.toLowerCase().includes(clean)
+  );
+
+  return matched.length > 0
+    ? matched.map(s => s.name)
+    : allSuggestions.slice(0, 8).map(s => s.name);
 };

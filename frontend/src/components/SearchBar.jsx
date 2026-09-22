@@ -1,17 +1,25 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Search, Mic, Image as ImageIcon, Link2, ArrowRight, Clock, TrendingUp } from 'lucide-react';
+import { Search, Mic, Image as ImageIcon, Link2, ArrowRight, TrendingUp, Sparkles } from 'lucide-react';
 import { getSearchSuggestions } from '../services/api';
 import { VoiceSearchModal } from './VoiceSearchModal';
 import { ImageUploadModal } from './ImageUploadModal';
 import { UrlSearchModal } from './UrlSearchModal';
 
 const POPULAR_SEARCHES = [
-  "iPhone 16 128GB",
-  "Samsung Galaxy S25",
-  "Sony WH-1000XM5",
-  "55 inch Smart TV",
-  "HP Laptop i7",
-  "Air Fryer",
+  "Apple iPhone 16 (128 GB)",
+  "Samsung Galaxy S25 5G",
+  "Sony WH-1000XM5 Wireless Headphones",
+  "Apple Watch Series 10 Smartwatch",
+  "HP Pavilion 15 Core i7 Laptop",
+  "Dell XPS 15 OLED Laptop",
+  "Samsung 55 inch Crystal 4K Smart TV",
+  "Nike Air Force 1 '07 Sneakers",
+  "Levi's Men's Graphic Crew Neck T-Shirt",
+  "Levi's 501 Original Fit Jeans",
+  "Philips Digital Air Fryer (4.1L)",
+  "Ceramic Insulated Travel Coffee Mug & Cup",
+  "boAt Rockerz 450 Bluetooth Headphones",
+  "Royal Canin Kitten Dry Food & Care Kit"
 ];
 
 export const SearchBar = ({ onSearch, initialQuery = '', className = '' }) => {
@@ -27,25 +35,32 @@ export const SearchBar = ({ onSearch, initialQuery = '', className = '' }) => {
   const dropdownRef = useRef(null);
 
   useEffect(() => {
-    const cleanQuery = query.trim();
-    if (cleanQuery.length < 2) {
-      setSuggestions([]);
-      setActiveIndex(-1);
-      return;
-    }
+    setQuery(initialQuery);
+  }, [initialQuery]);
 
+  useEffect(() => {
+    const cleanQuery = query.trim();
     let cancelled = false;
-    const timer = setTimeout(async () => {
+
+    const fetchSuggestions = async () => {
       try {
         const response = await getSearchSuggestions(cleanQuery);
         if (!cancelled) {
-          setSuggestions((response.suggestions || []).map((name) => ({ name })));
+          const list = Array.isArray(response)
+            ? response
+            : (response?.suggestions || response?.data || []);
+          const normalized = list.map((item) => typeof item === 'string' ? { name: item } : item);
+          setSuggestions(normalized.length > 0 ? normalized : POPULAR_SEARCHES.map(name => ({ name })));
           setActiveIndex(-1);
         }
       } catch {
-        if (!cancelled) setSuggestions([]);
+        if (!cancelled) {
+          setSuggestions(POPULAR_SEARCHES.map(name => ({ name })));
+        }
       }
-    }, 400);
+    };
+
+    const timer = setTimeout(fetchSuggestions, cleanQuery ? 150 : 0);
     return () => { cancelled = true; clearTimeout(timer); };
   }, [query]);
 
@@ -78,20 +93,25 @@ export const SearchBar = ({ onSearch, initialQuery = '', className = '' }) => {
   };
 
   const handleKeyDown = (e) => {
-    if (!showDropdown || suggestions.length === 0) return;
+    const activeList = suggestions.length > 0 ? suggestions : POPULAR_SEARCHES.map(name => ({ name }));
+    if (!showDropdown || activeList.length === 0) return;
     if (e.key === 'ArrowDown') {
       e.preventDefault();
-      setActiveIndex((prev) => Math.min(prev + 1, suggestions.length - 1));
+      setActiveIndex((prev) => Math.min(prev + 1, activeList.length - 1));
     } else if (e.key === 'ArrowUp') {
       e.preventDefault();
       setActiveIndex((prev) => Math.max(prev - 1, -1));
     } else if (e.key === 'Enter' && activeIndex >= 0) {
       e.preventDefault();
-      handleSuggestionClick(suggestions[activeIndex].name);
+      handleSuggestionClick(activeList[activeIndex].name);
     } else if (e.key === 'Escape') {
       setShowDropdown(false);
     }
   };
+
+  const displayedSuggestions = suggestions.length > 0
+    ? suggestions
+    : POPULAR_SEARCHES.map(name => ({ name }));
 
   return (
     <div className={`w-full max-w-4xl mx-auto ${className}`}>
@@ -111,7 +131,7 @@ export const SearchBar = ({ onSearch, initialQuery = '', className = '' }) => {
             }}
             onFocus={() => setShowDropdown(true)}
             onKeyDown={handleKeyDown}
-            placeholder="Search for a product (e.g., iPhone 16 128GB, Sony XM5, 55 inch TV)..."
+            placeholder="Search for any product (iPhone 16, Watch, Shoes, Laptop, TV, T-Shirt, Coffee Mug)..."
             className="search-bar-input w-full bg-transparent py-4 pl-3 pr-40 text-white placeholder-slate-400 text-base focus:outline-none"
             autoComplete="off"
           />
@@ -156,53 +176,37 @@ export const SearchBar = ({ onSearch, initialQuery = '', className = '' }) => {
         {showDropdown && (
           <div
             ref={dropdownRef}
-            className="absolute top-full left-0 right-0 mt-2 bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl shadow-black/40 overflow-hidden z-50 animate-fadeIn"
+            className="absolute top-full left-0 right-0 mt-2 max-h-96 overflow-y-auto bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl shadow-black/40 z-50 animate-fadeIn"
           >
-            {suggestions.length > 0 ? (
-              <>
-                <div className="px-4 pt-3 pb-1 text-[10px] font-bold text-slate-500 uppercase tracking-widest">
-                  Matching Products
+            <div className="px-4 pt-3 pb-1 flex items-center justify-between text-[10px] font-bold text-cyan-400 uppercase tracking-widest border-b border-slate-800">
+              <span className="flex items-center gap-1">
+                <Sparkles className="w-3.5 h-3.5" />
+                {query.trim() ? "Suggested Products & Matches" : "Popular Catalog Products"}
+              </span>
+              <span className="text-slate-500 font-normal lowercase">{displayedSuggestions.length} products available</span>
+            </div>
+
+            {displayedSuggestions.map((s, idx) => (
+              <button
+                key={`${s.name}_${idx}`}
+                type="button"
+                onMouseDown={() => handleSuggestionClick(s.name)}
+                className={`w-full flex items-center space-x-3 px-4 py-2.5 text-left transition ${idx === activeIndex
+                  ? 'bg-cyan-500/10 text-cyan-300'
+                  : 'hover:bg-slate-800/70 text-slate-200'
+                  }`}
+              >
+                {query.trim() ? (
+                  <Search className="w-4 h-4 text-cyan-500 shrink-0" />
+                ) : (
+                  <TrendingUp className="w-4 h-4 text-cyan-400 shrink-0" />
+                )}
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-semibold truncate">{s.name}</p>
                 </div>
-                {suggestions.map((s, idx) => (
-                  <button
-                    key={s.name}
-                    type="button"
-                    onMouseDown={() => handleSuggestionClick(s.name)}
-                    className={`w-full flex items-center space-x-3 px-4 py-3 text-left transition ${idx === activeIndex
-                      ? 'bg-cyan-500/10 text-cyan-300'
-                      : 'hover:bg-slate-800/70 text-slate-200'
-                      }`}
-                  >
-                    <Search className="w-4 h-4 text-cyan-500 shrink-0" />
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-semibold truncate">{s.name}</p>
-                    </div>
-                    <Search className="w-3.5 h-3.5 text-slate-600 shrink-0" />
-                  </button>
-                ))}
-              </>
-            ) : query.trim().length >= 2 ? (
-              <div className="px-4 py-4 text-sm text-slate-400 text-center">
-                No matching products found. Press Enter to search anyway.
-              </div>
-            ) : (
-              <>
-                <div className="px-4 pt-3 pb-1 text-[10px] font-bold text-slate-500 uppercase tracking-widest">
-                  Popular Searches
-                </div>
-                {POPULAR_SEARCHES.map((s) => (
-                  <button
-                    key={s}
-                    type="button"
-                    onMouseDown={() => handleSuggestionClick(s)}
-                    className="w-full flex items-center space-x-3 px-4 py-2.5 text-left hover:bg-slate-800/70 transition text-slate-300"
-                  >
-                    <TrendingUp className="w-4 h-4 text-cyan-500 shrink-0" />
-                    <span className="text-sm">{s}</span>
-                  </button>
-                ))}
-              </>
-            )}
+                <ArrowRight className="w-3.5 h-3.5 text-slate-600 shrink-0 group-hover:text-cyan-400" />
+              </button>
+            ))}
           </div>
         )}
       </form>
