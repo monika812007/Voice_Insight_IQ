@@ -1,4 +1,134 @@
 export const STORED_PRODUCTS = [
+  // ── Shirts & Fashion Apparel ──
+  {
+    id: "prod_levis_tshirt",
+    canonical_name: "Levi's Men's Graphic Crew Neck T-Shirt",
+    brand: "Levi's",
+    model: "Graphic Crew Tee",
+    category: "Fashion & Apparel",
+    description: "Levi's classic crew-neck graphic T-shirt made from 100% soft cotton with iconic branding. Available in multiple colors and sizes.",
+    image_url: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&auto=format&fit=crop&q=80",
+    specs: {
+      material: "100% Cotton",
+      fit: "Regular Fit",
+      neck: "Crew Neck",
+      sleeve: "Short Sleeve",
+      care: "Machine Wash"
+    }
+  },
+  {
+    id: "prod_uspolo_shirt",
+    canonical_name: "U.S. Polo Assn. Men's Solid Slim Fit Casual Cotton Shirt",
+    brand: "U.S. Polo Assn.",
+    model: "Slim Fit Casual Shirt",
+    category: "Fashion & Apparel",
+    description: "Premium breathable pure cotton casual button-down shirt featuring spread collar, long sleeves with button cuffs, and signature chest embroidery.",
+    image_url: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&auto=format&fit=crop&q=80",
+    specs: {
+      material: "100% Combed Cotton",
+      fit: "Slim Fit",
+      collar: "Spread Collar",
+      sleeve: "Long Sleeve",
+      pattern: "Solid"
+    }
+  },
+  {
+    id: "prod_tommy_polo",
+    canonical_name: "Tommy Hilfiger Men's Classic Pique Polo T-Shirt",
+    brand: "Tommy Hilfiger",
+    model: "Classic Pique Polo",
+    category: "Fashion & Apparel",
+    description: "Signature Tommy Hilfiger short sleeve polo shirt made of 100% organic pique cotton with two-button placket and signature flag embroidery.",
+    image_url: "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&auto=format&fit=crop&q=80",
+    specs: {
+      material: "100% Organic Pique Cotton",
+      fit: "Custom Fit",
+      neck: "Polo Collar",
+      sleeve: "Short Sleeve",
+      pattern: "Solid with Flag Logo"
+    }
+  },
+  {
+    id: "prod_zara_linen_shirt",
+    canonical_name: "Zara Men's Relaxed Fit 100% Pure Linen Casual Shirt",
+    brand: "Zara",
+    model: "Pure Linen Shirt",
+    category: "Fashion & Apparel",
+    description: "Lightweight and airy pure linen relaxed-fit casual summer shirt with resort collar and mother-of-pearl style buttons.",
+    image_url: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&auto=format&fit=crop&q=80",
+    specs: {
+      material: "100% Pure European Linen",
+      fit: "Relaxed Fit",
+      collar: "Camp / Resort Collar",
+      sleeve: "Long Sleeve (Roll-up)",
+      pattern: "Natural Linen Texture"
+    }
+  },
+  {
+    id: "prod_roadster_denim_shirt",
+    canonical_name: "Roadster Men's Washed Indigo Denim Casual Shirt",
+    brand: "Roadster",
+    model: "Washed Denim Shirt",
+    category: "Fashion & Apparel",
+    description: "Rugged mid-wash denim shirt with double flap chest pockets, snap buttons, curved hemline, and durable contrast stitching.",
+    image_url: "https://images.unsplash.com/photo-1603252109303-2751441dd157?w=600&auto=format&fit=crop&q=80",
+    specs: {
+      material: "100% Denim Cotton",
+      fit: "Regular Fit",
+      pockets: "Dual Flap Chest Pockets",
+      closure: "Snap Buttons",
+      color: "Mid Indigo Wash"
+    }
+  },
+  {
+    id: "prod_allen_solly_shirt",
+    canonical_name: "Allen Solly Men's Regular Fit Formal Cotton Shirt - White",
+    brand: "Allen Solly",
+    model: "Formal Executive Shirt",
+    category: "Fashion & Apparel",
+    description: "Crisp white easy-iron formal dress shirt crafted from luxury cotton blend with semi-cutaway collar, perfect for business meetings.",
+    image_url: "https://images.unsplash.com/photo-1620012253295-c15c429f66bf?w=600&auto=format&fit=crop&q=80",
+    specs: {
+      material: "100% Premium Cotton",
+      fit: "Regular Executive Fit",
+      collar: "Semi-Cutaway Collar",
+      color: "Crisp White",
+      cuff: "Single Button Round Cuff"
+    }
+  },
+  {
+    id: "prod_h_m_cotton_tee",
+    canonical_name: "H&M Men's Regular Fit Organic Cotton T-Shirt (Pack of 3)",
+    brand: "H&M",
+    model: "Essential Crew Tee 3-Pack",
+    category: "Fashion & Apparel",
+    description: "Pack of 3 super-soft jersey knit organic cotton crew-neck everyday t-shirts in classic Black, White, and Heather Grey.",
+    image_url: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600&auto=format&fit=crop&q=80",
+    specs: {
+      material: "100% Organic Cotton Jersey",
+      pack: "3 T-Shirts (Black, White, Grey)",
+      neck: "Crew Neck",
+      sleeve: "Short Sleeve"
+    }
+  },
+  {
+    id: "prod_levis_501",
+    canonical_name: "Levi's 501 Original Fit Men's Jeans - Dark Indigo",
+    brand: "Levi's",
+    model: "501 Original Fit",
+    category: "Fashion & Apparel",
+    description: "The original straight-leg jean since 1873. Button fly, sits at waist, straight through hip, thigh and leg opening. Made with authentic denim.",
+    image_url: "https://images.unsplash.com/photo-1542272454315-4c01d7abdf4a?w=600&auto=format&fit=crop&q=80",
+    specs: {
+      fit: "Original Straight",
+      rise: "High Rise",
+      fabric: "Denim",
+      closure: "Button Fly",
+      color: "Dark Indigo"
+    }
+  },
+
+  // ── Smartphones & Mobiles ──
   {
     id: "prod_iphone16_128gb",
     canonical_name: "Apple iPhone 16 (128 GB) - Black",
@@ -34,6 +164,92 @@ export const STORED_PRODUCTS = [
     }
   },
   {
+    id: "prod_oneplus_12",
+    canonical_name: "OnePlus 12 5G (16GB RAM, 512GB Storage) - Silky Black",
+    brand: "OnePlus",
+    model: "OnePlus 12",
+    category: "Smartphones",
+    description: "OnePlus 12 with Snapdragon 8 Gen 3, 2K 120Hz ProXDR display, 4th Gen Hasselblad Camera system, and 100W SUPERVOOC charging.",
+    image_url: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600&auto=format&fit=crop&q=80",
+    specs: {
+      storage: "512 GB",
+      ram: "16 GB",
+      display: "6.82 inch 2K AMOLED 120Hz",
+      processor: "Snapdragon 8 Gen 3",
+      battery: "5400 mAh (100W Fast Charge)"
+    }
+  },
+
+  // ── Shoes & Footwear ──
+  {
+    id: "prod_nike_air_force1",
+    canonical_name: "Nike Air Force 1 '07 Low Men's Sneakers & Shoes - White",
+    brand: "Nike",
+    model: "Air Force 1 '07",
+    category: "Footwear & Shoes",
+    description: "The radically simple, endlessly versatile Nike Air Force 1 with crisp leather upper and foam midsole. An icon since 1982 with timeless all-white style.",
+    image_url: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=80",
+    specs: {
+      sole: "Rubber",
+      upper: "Leather",
+      closure: "Lace-Up",
+      cushioning: "Nike Air",
+      color: "White"
+    }
+  },
+  {
+    id: "prod_adidas_ultraboost",
+    canonical_name: "Adidas Ultraboost Light Running Shoes - Core Black",
+    brand: "Adidas",
+    model: "Ultraboost Light",
+    category: "Footwear & Shoes",
+    description: "Experience epic energy with the lightest Ultraboost ever made. Light BOOST midsole with Continental Rubber outsole for supreme traction.",
+    image_url: "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?w=600&auto=format&fit=crop&q=80",
+    specs: {
+      upper: "PRIMEKNIT+ Textile",
+      midsole: "Light BOOST",
+      outsole: "Continental Better Rubber",
+      weight: "299g",
+      color: "Core Black"
+    }
+  },
+
+  // ── Smartwatches & Watches ──
+  {
+    id: "prod_apple_watch_10",
+    canonical_name: "Apple Watch Series 10 (GPS, 46mm) Smartwatch - Jet Black",
+    brand: "Apple",
+    model: "Watch Series 10",
+    category: "Smartwatches & Watches",
+    description: "Apple Watch Series 10 features the biggest, most advanced display yet, faster charging, depth & water temperature sensors, and ECG health tracking.",
+    image_url: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80",
+    specs: {
+      display: "Always-On Retina OLED",
+      case_size: "46mm",
+      connectivity: "GPS + Bluetooth 5.3",
+      water_resistance: "50m",
+      battery: "Up to 18 hours"
+    }
+  },
+  {
+    id: "prod_samsung_galaxy_watch7",
+    canonical_name: "Samsung Galaxy Watch 7 (Bluetooth, 44mm) - Silver",
+    brand: "Samsung",
+    model: "Galaxy Watch 7",
+    category: "Smartwatches & Watches",
+    description: "Samsung Galaxy Watch 7 powered by 3nm processor with dual-frequency GPS, Energy Score AI analytics, and BioActive Health sensor.",
+    image_url: "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&auto=format&fit=crop&q=80",
+    specs: {
+      display: "1.5 inch Super AMOLED",
+      processor: "Exynos W1000 (3nm)",
+      sensors: "ECG, Heart Rate, BIA, Sleep Apnea",
+      water_resistance: "5ATM + IP68",
+      color: "Silver"
+    }
+  },
+
+  // ── Headphones & Audio ──
+  {
     id: "prod_sony_xm5",
     canonical_name: "Sony WH-1000XM5 Wireless Noise Canceling Headphones",
     brand: "Sony",
@@ -49,6 +265,24 @@ export const STORED_PRODUCTS = [
       weight: "250g"
     }
   },
+  {
+    id: "prod_boat_rockerz",
+    canonical_name: "boAt Rockerz 450 Bluetooth On-Ear Headphones with Mic",
+    brand: "boAt",
+    model: "Rockerz 450",
+    category: "Headphones & Audio",
+    description: "boAt Rockerz 450 offers massive 15-hour playback, 40mm dynamic drivers, padded ear cushions, and instant dual pairing.",
+    image_url: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80",
+    specs: {
+      type: "On-Ear Wireless",
+      battery: "15 Hours Playback",
+      driver_size: "40 mm",
+      bluetooth: "v5.0",
+      color: "Luscious Black"
+    }
+  },
+
+  // ── Laptops & Computers ──
   {
     id: "prod_hp_pavilion15",
     canonical_name: "HP Pavilion 15 Core i7 13th Gen Laptop (16GB/512GB SSD/Win 11)",
@@ -67,6 +301,25 @@ export const STORED_PRODUCTS = [
     }
   },
   {
+    id: "prod_dell_xps15",
+    canonical_name: "Dell XPS 15 Laptop (Intel Core i9 13th Gen, 32GB RAM, 1TB SSD)",
+    brand: "Dell",
+    model: "XPS 15 9530",
+    category: "Laptops & Computers",
+    description: "Dell XPS 15 with 3.5K OLED InfinityEdge touch display, NVIDIA GeForce RTX 4070, CNC aluminum chassis, and quad-speaker studio sound.",
+    image_url: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&auto=format&fit=crop&q=80",
+    specs: {
+      processor: "Intel Core i9-13900H",
+      ram: "32 GB DDR5",
+      storage: "1 TB NVMe SSD",
+      display: "15.6 inch 3.5K OLED Touch",
+      graphics: "NVIDIA RTX 4070 8GB",
+      os: "Windows 11 Pro"
+    }
+  },
+
+  // ── Televisions ──
+  {
     id: "prod_samsung_tv55",
     canonical_name: "Samsung 55 inch Crystal 4K Vivid Pro Ultra HD Smart TV",
     brand: "Samsung",
@@ -83,70 +336,8 @@ export const STORED_PRODUCTS = [
       audio: "20W 2CH"
     }
   },
-  {
-    id: "prod_levis_tshirt",
-    canonical_name: "Levi's Men's Graphic Crew Neck T-Shirt",
-    brand: "Levi's",
-    model: "Graphic Crew Tee",
-    category: "Fashion & Apparel",
-    description: "Levi's classic crew-neck graphic T-shirt made from 100% soft cotton with iconic branding. Available in multiple colors and sizes. Machine washable.",
-    image_url: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&auto=format&fit=crop&q=80",
-    specs: {
-      material: "100% Cotton",
-      fit: "Regular Fit",
-      neck: "Crew Neck",
-      sleeve: "Short Sleeve",
-      care: "Machine Wash"
-    }
-  },
-  {
-    id: "prod_levis_501",
-    canonical_name: "Levi's 501 Original Fit Men's Jeans - Dark Indigo",
-    brand: "Levi's",
-    model: "501 Original Fit",
-    category: "Fashion & Apparel",
-    description: "The original straight-leg jean since 1873. Button fly, sits at waist, straight through hip, thigh and leg opening. Made with authentic denim.",
-    image_url: "https://images.unsplash.com/photo-1542272454315-4c01d7abdf4a?w=600&auto=format&fit=crop&q=80",
-    specs: {
-      fit: "Original Straight",
-      rise: "High Rise",
-      fabric: "Denim",
-      closure: "Button Fly",
-      color: "Dark Indigo"
-    }
-  },
-  {
-    id: "prod_nike_air_force1",
-    canonical_name: "Nike Air Force 1 '07 Low Men's Sneakers & Shoes - White",
-    brand: "Nike",
-    model: "Air Force 1 '07",
-    category: "Footwear & Shoes",
-    description: "The radically simple, endlessly versatile Nike Air Force 1 with crisp leather upper and foam midsole. An icon since 1982 with timeless all-white style.",
-    image_url: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=80",
-    specs: {
-      sole: "Rubber",
-      upper: "Leather",
-      closure: "Lace-Up",
-      cushioning: "Nike Air",
-      color: "White"
-    }
-  },
-  {
-    id: "prod_apple_watch_10",
-    canonical_name: "Apple Watch Series 10 (GPS, 46mm) Smartwatch - Jet Black",
-    brand: "Apple",
-    model: "Watch Series 10",
-    category: "Smartwatches & Watches",
-    description: "Apple Watch Series 10 features the biggest, most advanced display yet, faster charging, depth & water temperature sensors, and ECG health tracking.",
-    image_url: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80",
-    specs: {
-      display: "Always-On Retina OLED",
-      case_size: "46mm",
-      connectivity: "GPS + Bluetooth 5.3",
-      water_resistance: "50m",
-      battery: "Up to 18 hours"
-    }
-  },
+
+  // ── Kitchen & Home ──
   {
     id: "prod_coffee_mug",
     canonical_name: "Ceramic Insulated Travel Coffee Mug & Cup (450ml)",
@@ -194,263 +385,11 @@ export const STORED_PRODUCTS = [
       flavour: "Chicken",
       age_range: "0–12 months"
     }
-  },
-  {
-    id: "prod_dell_xps15",
-    canonical_name: "Dell XPS 15 Laptop (Intel Core i9 13th Gen, 32GB RAM, 1TB SSD)",
-    brand: "Dell",
-    model: "XPS 15 9530",
-    category: "Laptops & Computers",
-    description: "Dell XPS 15 with 3.5K OLED InfinityEdge touch display, NVIDIA GeForce RTX 4070, CNC aluminum chassis, and quad-speaker studio sound.",
-    image_url: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&auto=format&fit=crop&q=80",
-    specs: {
-      processor: "Intel Core i9-13900H",
-      ram: "32 GB DDR5",
-      storage: "1 TB NVMe SSD",
-      display: "15.6 inch 3.5K OLED Touch",
-      graphics: "NVIDIA RTX 4070 8GB",
-      os: "Windows 11 Pro"
-    }
-  },
-  {
-    id: "prod_boat_rockerz",
-    canonical_name: "boAt Rockerz 450 Bluetooth On-Ear Headphones with Mic",
-    brand: "boAt",
-    model: "Rockerz 450",
-    category: "Headphones & Audio",
-    description: "boAt Rockerz 450 offers massive 15-hour playback, 40mm dynamic drivers, padded ear cushions, and instant dual pairing.",
-    image_url: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80",
-    specs: {
-      type: "On-Ear Wireless",
-      battery: "15 Hours Playback",
-      driver_size: "40 mm",
-      bluetooth: "v5.0",
-      color: "Luscious Black"
-    }
   }
 ];
 
 export const STORED_LISTINGS = [
-  {
-    id: "list_amz_iphone16",
-    product_id: "prod_iphone16_128gb",
-    platform_name: "Amazon",
-    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
-    product_url: "https://www.amazon.in/s?k=Apple+iPhone+16+128GB",
-    seller_name: "Appario Retail Private Ltd",
-    seller_rating: 4.7,
-    price: 48999,
-    original_price: 54999,
-    offer_price: 46999,
-    discount: "15%",
-    currency: "₹",
-    rating: 4.5,
-    review_count: 18420,
-    availability: true,
-    checked_at: "2026-08-18T11:45:00Z",
-    is_demo_source: true,
-    is_affiliate_link: true
-  },
-  {
-    id: "list_fk_iphone16",
-    product_id: "prod_iphone16_128gb",
-    platform_name: "Flipkart",
-    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flipkart_logo.svg",
-    product_url: "https://www.flipkart.com/search?q=Apple+iPhone+16+128GB",
-    seller_name: "SuperComNet Retail",
-    seller_rating: 4.5,
-    price: 50499,
-    original_price: 54999,
-    offer_price: 49999,
-    discount: "9%",
-    currency: "₹",
-    rating: 4.6,
-    review_count: 14200,
-    availability: true,
-    checked_at: "2026-08-18T11:40:00Z",
-    is_demo_source: true,
-    is_affiliate_link: true
-  },
-  {
-    id: "list_crm_iphone16",
-    product_id: "prod_iphone16_128gb",
-    platform_name: "Croma",
-    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Croma_Logo.png",
-    product_url: "https://www.croma.com/searchB?q=Apple+iPhone+16+128GB",
-    seller_name: "Croma Digital Store",
-    seller_rating: 4.8,
-    price: 52000,
-    original_price: 54999,
-    offer_price: 50500,
-    discount: "8%",
-    currency: "₹",
-    rating: 4.4,
-    review_count: 9100,
-    availability: true,
-    checked_at: "2026-08-18T11:30:00Z",
-    is_demo_source: true,
-    is_affiliate_link: false
-  },
-  {
-    id: "list_amz_s25",
-    product_id: "prod_samsung_s25",
-    platform_name: "Amazon",
-    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
-    product_url: "https://www.amazon.in/s?k=Samsung+Galaxy+S25+5G",
-    seller_name: "Samsung Official Store",
-    seller_rating: 4.9,
-    price: 74999,
-    original_price: 79999,
-    offer_price: 71999,
-    discount: "10%",
-    currency: "₹",
-    rating: 4.7,
-    review_count: 8900,
-    availability: true,
-    checked_at: "2026-08-18T11:45:00Z",
-    is_demo_source: true,
-    is_affiliate_link: true
-  },
-  {
-    id: "list_fk_s25",
-    product_id: "prod_samsung_s25",
-    platform_name: "Flipkart",
-    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flipkart_logo.svg",
-    product_url: "https://www.flipkart.com/search?q=Samsung+Galaxy+S25+5G",
-    seller_name: "OmniTech Retail",
-    seller_rating: 4.4,
-    price: 73999,
-    original_price: 79999,
-    offer_price: 72499,
-    discount: "9%",
-    currency: "₹",
-    rating: 4.5,
-    review_count: 6200,
-    availability: true,
-    checked_at: "2026-08-18T11:50:00Z",
-    is_demo_source: true,
-    is_affiliate_link: true
-  },
-  {
-    id: "list_amz_xm5",
-    product_id: "prod_sony_xm5",
-    platform_name: "Amazon",
-    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
-    product_url: "https://www.amazon.in/s?k=Sony+WH-1000XM5+Wireless+Headphones",
-    seller_name: "Electronics Bazaar",
-    seller_rating: 4.6,
-    price: 24990,
-    original_price: 34990,
-    offer_price: 22490,
-    discount: "35%",
-    currency: "₹",
-    rating: 4.6,
-    review_count: 24500,
-    availability: true,
-    checked_at: "2026-08-18T11:50:00Z",
-    is_demo_source: true,
-    is_affiliate_link: true
-  },
-  {
-    id: "list_rel_xm5",
-    product_id: "prod_sony_xm5",
-    platform_name: "Reliance Digital",
-    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/e/eb/Reliance_Digital_Logo.svg",
-    product_url: "https://www.reliancedigital.in/search?q=Sony+WH-1000XM5",
-    seller_name: "Reliance Retail Ltd",
-    seller_rating: 4.7,
-    price: 26990,
-    original_price: 34990,
-    offer_price: 24990,
-    discount: "28%",
-    currency: "₹",
-    rating: 4.5,
-    review_count: 11300,
-    availability: true,
-    checked_at: "2026-08-18T11:20:00Z",
-    is_demo_source: true,
-    is_affiliate_link: false
-  },
-  {
-    id: "list_amz_hp15",
-    product_id: "prod_hp_pavilion15",
-    platform_name: "Amazon",
-    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
-    product_url: "https://www.amazon.in/s?k=HP+Pavilion+15+Core+i7+Laptop",
-    seller_name: "Appario Retail Private Ltd",
-    seller_rating: 4.7,
-    price: 64990,
-    original_price: 78000,
-    offer_price: 62990,
-    discount: "19%",
-    currency: "₹",
-    rating: 4.4,
-    review_count: 5400,
-    availability: true,
-    checked_at: "2026-08-18T11:55:00Z",
-    is_demo_source: true,
-    is_affiliate_link: true
-  },
-  {
-    id: "list_crm_hp15",
-    product_id: "prod_hp_pavilion15",
-    platform_name: "Croma",
-    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Croma_Logo.png",
-    product_url: "https://www.croma.com/searchB?q=HP+Pavilion+15+Laptop",
-    seller_name: "Croma Retail",
-    seller_rating: 4.8,
-    price: 66990,
-    original_price: 78000,
-    offer_price: 64500,
-    discount: "17%",
-    currency: "₹",
-    rating: 4.3,
-    review_count: 3100,
-    availability: true,
-    checked_at: "2026-08-18T11:15:00Z",
-    is_demo_source: true,
-    is_affiliate_link: false
-  },
-  {
-    id: "list_amz_tv55",
-    product_id: "prod_samsung_tv55",
-    platform_name: "Amazon",
-    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
-    product_url: "https://www.amazon.in/s?k=Samsung+55+inch+4K+Smart+TV",
-    seller_name: "Dawntech Electronics",
-    seller_rating: 4.5,
-    price: 42990,
-    original_price: 64900,
-    offer_price: 39990,
-    discount: "38%",
-    currency: "₹",
-    rating: 4.3,
-    review_count: 12800,
-    availability: true,
-    checked_at: "2026-08-18T11:45:00Z",
-    is_demo_source: true,
-    is_affiliate_link: true
-  },
-  {
-    id: "list_fk_tv55",
-    product_id: "prod_samsung_tv55",
-    platform_name: "Flipkart",
-    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flipkart_logo.svg",
-    product_url: "https://www.flipkart.com/search?q=Samsung+55+inch+4K+Smart+TV",
-    seller_name: "IndiFlashMart Retail",
-    seller_rating: 4.3,
-    price: 44990,
-    original_price: 64900,
-    offer_price: 41990,
-    discount: "35%",
-    currency: "₹",
-    rating: 4.4,
-    review_count: 9400,
-    availability: true,
-    checked_at: "2026-08-18T11:35:00Z",
-    is_demo_source: true,
-    is_affiliate_link: true
-  },
+  // Levi's T-Shirt
   {
     id: "list_amz_tshirt",
     product_id: "prod_levis_tshirt",
@@ -511,6 +450,240 @@ export const STORED_LISTINGS = [
     is_demo_source: true,
     is_affiliate_link: true
   },
+
+  // U.S. Polo Shirt
+  {
+    id: "list_amz_uspolo",
+    product_id: "prod_uspolo_shirt",
+    platform_name: "Amazon",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    product_url: "https://www.amazon.in/s?k=US+Polo+Assn+Mens+Casual+Cotton+Shirt",
+    seller_name: "USPA Official India",
+    seller_rating: 4.7,
+    price: 2199,
+    original_price: 2999,
+    offer_price: 1749,
+    discount: "42%",
+    currency: "₹",
+    rating: 4.4,
+    review_count: 11200,
+    availability: true,
+    checked_at: "2026-08-18T11:45:00Z",
+    is_demo_source: true,
+    is_affiliate_link: true
+  },
+  {
+    id: "list_myntra_uspolo",
+    product_id: "prod_uspolo_shirt",
+    platform_name: "Myntra",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Myntra_logo.png",
+    product_url: "https://www.myntra.com/us-polo-casual-shirt",
+    seller_name: "Myntra Apparel",
+    seller_rating: 4.6,
+    price: 2299,
+    original_price: 2999,
+    offer_price: 1699,
+    discount: "43%",
+    currency: "₹",
+    rating: 4.5,
+    review_count: 18500,
+    availability: true,
+    checked_at: "2026-08-18T11:52:00Z",
+    is_demo_source: true,
+    is_affiliate_link: true
+  },
+
+  // Tommy Polo Shirt
+  {
+    id: "list_amz_tommy",
+    product_id: "prod_tommy_polo",
+    platform_name: "Amazon",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    product_url: "https://www.amazon.in/s?k=Tommy+Hilfiger+Mens+Polo+T-Shirt",
+    seller_name: "Tommy Hilfiger Store",
+    seller_rating: 4.8,
+    price: 3599,
+    original_price: 4999,
+    offer_price: 2899,
+    discount: "42%",
+    currency: "₹",
+    rating: 4.5,
+    review_count: 9400,
+    availability: true,
+    checked_at: "2026-08-18T11:46:00Z",
+    is_demo_source: true,
+    is_affiliate_link: true
+  },
+  {
+    id: "list_fk_tommy",
+    product_id: "prod_tommy_polo",
+    platform_name: "Flipkart",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flipkart_logo.svg",
+    product_url: "https://www.flipkart.com/search?q=Tommy+Hilfiger+Polo+Shirt",
+    seller_name: "Retail Fashion Hub",
+    seller_rating: 4.4,
+    price: 3799,
+    original_price: 4999,
+    offer_price: 3199,
+    discount: "36%",
+    currency: "₹",
+    rating: 4.3,
+    review_count: 6200,
+    availability: true,
+    checked_at: "2026-08-18T11:39:00Z",
+    is_demo_source: true,
+    is_affiliate_link: true
+  },
+
+  // Zara Linen Shirt
+  {
+    id: "list_amz_zara",
+    product_id: "prod_zara_linen_shirt",
+    platform_name: "Amazon",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    product_url: "https://www.amazon.in/s?k=Mens+Pure+Linen+Casual+Shirt",
+    seller_name: "Linen House India",
+    seller_rating: 4.6,
+    price: 2990,
+    original_price: 3990,
+    offer_price: 2490,
+    discount: "38%",
+    currency: "₹",
+    rating: 4.4,
+    review_count: 7800,
+    availability: true,
+    checked_at: "2026-08-18T11:47:00Z",
+    is_demo_source: true,
+    is_affiliate_link: true
+  },
+  {
+    id: "list_myntra_zara",
+    product_id: "prod_zara_linen_shirt",
+    platform_name: "Myntra",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Myntra_logo.png",
+    product_url: "https://www.myntra.com/mens-linen-shirt",
+    seller_name: "Myntra Premium",
+    seller_rating: 4.7,
+    price: 2890,
+    original_price: 3990,
+    offer_price: 2290,
+    discount: "43%",
+    currency: "₹",
+    rating: 4.5,
+    review_count: 14200,
+    availability: true,
+    checked_at: "2026-08-18T11:51:00Z",
+    is_demo_source: true,
+    is_affiliate_link: true
+  },
+
+  // Roadster Denim Shirt
+  {
+    id: "list_myntra_roadster",
+    product_id: "prod_roadster_denim_shirt",
+    platform_name: "Myntra",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Myntra_logo.png",
+    product_url: "https://www.myntra.com/roadster-denim-shirt",
+    seller_name: "Roadster Official Store",
+    seller_rating: 4.5,
+    price: 1499,
+    original_price: 2499,
+    offer_price: 999,
+    discount: "60%",
+    currency: "₹",
+    rating: 4.3,
+    review_count: 32000,
+    availability: true,
+    checked_at: "2026-08-18T11:48:00Z",
+    is_demo_source: true,
+    is_affiliate_link: true
+  },
+  {
+    id: "list_fk_roadster",
+    product_id: "prod_roadster_denim_shirt",
+    platform_name: "Flipkart",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flipkart_logo.svg",
+    product_url: "https://www.flipkart.com/search?q=Roadster+Denim+Shirt",
+    seller_name: "Fashion Trendz",
+    seller_rating: 4.2,
+    price: 1599,
+    original_price: 2499,
+    offer_price: 1099,
+    discount: "56%",
+    currency: "₹",
+    rating: 4.2,
+    review_count: 16800,
+    availability: true,
+    checked_at: "2026-08-18T11:35:00Z",
+    is_demo_source: true,
+    is_affiliate_link: true
+  },
+
+  // Allen Solly Shirt
+  {
+    id: "list_amz_allensolly",
+    product_id: "prod_allen_solly_shirt",
+    platform_name: "Amazon",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    product_url: "https://www.amazon.in/s?k=Allen+Solly+Mens+Formal+Cotton+Shirt",
+    seller_name: "Allen Solly India",
+    seller_rating: 4.7,
+    price: 1899,
+    original_price: 2499,
+    offer_price: 1499,
+    discount: "40%",
+    currency: "₹",
+    rating: 4.4,
+    review_count: 19500,
+    availability: true,
+    checked_at: "2026-08-18T11:54:00Z",
+    is_demo_source: true,
+    is_affiliate_link: true
+  },
+  {
+    id: "list_fk_allensolly",
+    product_id: "prod_allen_solly_shirt",
+    platform_name: "Flipkart",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flipkart_logo.svg",
+    product_url: "https://www.flipkart.com/search?q=Allen+Solly+Formal+Shirt",
+    seller_name: "Retail Solly Store",
+    seller_rating: 4.4,
+    price: 1999,
+    original_price: 2499,
+    offer_price: 1599,
+    discount: "36%",
+    currency: "₹",
+    rating: 4.3,
+    review_count: 12400,
+    availability: true,
+    checked_at: "2026-08-18T11:41:00Z",
+    is_demo_source: true,
+    is_affiliate_link: true
+  },
+
+  // H&M 3-Pack T-Shirt
+  {
+    id: "list_myntra_hm",
+    product_id: "prod_h_m_cotton_tee",
+    platform_name: "Myntra",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Myntra_logo.png",
+    product_url: "https://www.myntra.com/hm-tshirt-3-pack",
+    seller_name: "H&M Official Online",
+    seller_rating: 4.8,
+    price: 1999,
+    original_price: 2499,
+    offer_price: 1499,
+    discount: "40%",
+    currency: "₹",
+    rating: 4.6,
+    review_count: 28400,
+    availability: true,
+    checked_at: "2026-08-18T11:49:00Z",
+    is_demo_source: true,
+    is_affiliate_link: true
+  },
+
+  // Levi's 501
   {
     id: "list_amz_levis501",
     product_id: "prod_levis_501",
@@ -531,26 +704,72 @@ export const STORED_LISTINGS = [
     is_demo_source: true,
     is_affiliate_link: true
   },
+
+  // iPhone 16
   {
-    id: "list_myntra_levis501",
-    product_id: "prod_levis_501",
-    platform_name: "Myntra",
-    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Myntra_logo.png",
-    product_url: "https://www.myntra.com/levis-501-jeans",
-    seller_name: "Myntra Apparel",
-    seller_rating: 4.5,
-    price: 3299,
-    original_price: 4999,
-    offer_price: 2799,
-    discount: "44%",
+    id: "list_amz_iphone16",
+    product_id: "prod_iphone16_128gb",
+    platform_name: "Amazon",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    product_url: "https://www.amazon.in/s?k=Apple+iPhone+16+128GB",
+    seller_name: "Appario Retail Private Ltd",
+    seller_rating: 4.7,
+    price: 48999,
+    original_price: 54999,
+    offer_price: 46999,
+    discount: "15%",
     currency: "₹",
-    rating: 4.4,
-    review_count: 35000,
+    rating: 4.5,
+    review_count: 18420,
     availability: true,
-    checked_at: "2026-08-18T11:42:00Z",
+    checked_at: "2026-08-18T11:45:00Z",
     is_demo_source: true,
     is_affiliate_link: true
   },
+  {
+    id: "list_fk_iphone16",
+    product_id: "prod_iphone16_128gb",
+    platform_name: "Flipkart",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flipkart_logo.svg",
+    product_url: "https://www.flipkart.com/search?q=Apple+iPhone+16+128GB",
+    seller_name: "SuperComNet Retail",
+    seller_rating: 4.5,
+    price: 50499,
+    original_price: 54999,
+    offer_price: 49999,
+    discount: "9%",
+    currency: "₹",
+    rating: 4.6,
+    review_count: 14200,
+    availability: true,
+    checked_at: "2026-08-18T11:40:00Z",
+    is_demo_source: true,
+    is_affiliate_link: true
+  },
+
+  // Samsung S25
+  {
+    id: "list_amz_s25",
+    product_id: "prod_samsung_s25",
+    platform_name: "Amazon",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    product_url: "https://www.amazon.in/s?k=Samsung+Galaxy+S25+5G",
+    seller_name: "Samsung Official Store",
+    seller_rating: 4.9,
+    price: 74999,
+    original_price: 79999,
+    offer_price: 71999,
+    discount: "10%",
+    currency: "₹",
+    rating: 4.7,
+    review_count: 8900,
+    availability: true,
+    checked_at: "2026-08-18T11:45:00Z",
+    is_demo_source: true,
+    is_affiliate_link: true
+  },
+
+  // Nike AF1
   {
     id: "list_amz_nikeaf1",
     product_id: "prod_nike_air_force1",
@@ -571,46 +790,30 @@ export const STORED_LISTINGS = [
     is_demo_source: true,
     is_affiliate_link: true
   },
+
+  // Adidas Ultraboost
   {
-    id: "list_fk_nikeaf1",
-    product_id: "prod_nike_air_force1",
-    platform_name: "Flipkart",
-    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flipkart_logo.svg",
-    product_url: "https://www.flipkart.com/search?q=Nike+Air+Force+1+07",
-    seller_name: "Sports World",
-    seller_rating: 4.4,
-    price: 7995,
-    original_price: 9495,
-    offer_price: 7495,
-    discount: "21%",
+    id: "list_amz_adidas",
+    product_id: "prod_adidas_ultraboost",
+    platform_name: "Amazon",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    product_url: "https://www.amazon.in/s?k=Adidas+Ultraboost+Light+Running+Shoes",
+    seller_name: "Adidas Official Store",
+    seller_rating: 4.8,
+    price: 13999,
+    original_price: 18999,
+    offer_price: 11999,
+    discount: "37%",
     currency: "₹",
-    rating: 4.3,
-    review_count: 18900,
+    rating: 4.6,
+    review_count: 15400,
     availability: true,
-    checked_at: "2026-08-18T11:38:00Z",
+    checked_at: "2026-08-18T11:53:00Z",
     is_demo_source: true,
     is_affiliate_link: true
   },
-  {
-    id: "list_myntra_nikeaf1",
-    product_id: "prod_nike_air_force1",
-    platform_name: "Myntra",
-    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Myntra_logo.png",
-    product_url: "https://www.myntra.com/nike-air-force-1",
-    seller_name: "Myntra Footwear Hub",
-    seller_rating: 4.6,
-    price: 7295,
-    original_price: 9495,
-    offer_price: 6795,
-    discount: "28%",
-    currency: "₹",
-    rating: 4.5,
-    review_count: 55000,
-    availability: true,
-    checked_at: "2026-08-18T11:48:00Z",
-    is_demo_source: true,
-    is_affiliate_link: true
-  },
+
+  // Apple Watch 10
   {
     id: "list_amz_watch10",
     product_id: "prod_apple_watch_10",
@@ -631,86 +834,52 @@ export const STORED_LISTINGS = [
     is_demo_source: true,
     is_affiliate_link: true
   },
+
+  // Samsung Galaxy Watch 7
   {
-    id: "list_crm_watch10",
-    product_id: "prod_apple_watch_10",
-    platform_name: "Croma",
-    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Croma_Logo.png",
-    product_url: "https://www.croma.com/searchB?q=Apple+Watch+Series+10",
-    seller_name: "Croma Store",
+    id: "list_amz_galaxywatch",
+    product_id: "prod_samsung_galaxy_watch7",
+    platform_name: "Amazon",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    product_url: "https://www.amazon.in/s?k=Samsung+Galaxy+Watch+7",
+    seller_name: "Samsung Brand Store",
     seller_rating: 4.7,
-    price: 47900,
-    original_price: 49900,
-    offer_price: 45900,
-    discount: "8%",
+    price: 29999,
+    original_price: 34999,
+    offer_price: 26999,
+    discount: "23%",
     currency: "₹",
     rating: 4.6,
-    review_count: 4200,
+    review_count: 8200,
     availability: true,
-    checked_at: "2026-08-18T11:35:00Z",
+    checked_at: "2026-08-18T11:51:00Z",
     is_demo_source: true,
-    is_affiliate_link: false
+    is_affiliate_link: true
   },
+
+  // Sony XM5
   {
-    id: "list_amz_mug",
-    product_id: "prod_coffee_mug",
+    id: "list_amz_xm5",
+    product_id: "prod_sony_xm5",
     platform_name: "Amazon",
     platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
-    product_url: "https://www.amazon.in/s?k=Insulated+Travel+Coffee+Mug",
-    seller_name: "Kitchen Essentials Hub",
+    product_url: "https://www.amazon.in/s?k=Sony+WH-1000XM5+Wireless+Headphones",
+    seller_name: "Electronics Bazaar",
     seller_rating: 4.6,
-    price: 1499,
-    original_price: 2499,
-    offer_price: 1199,
-    discount: "52%",
+    price: 24990,
+    original_price: 34990,
+    offer_price: 22490,
+    discount: "35%",
     currency: "₹",
-    rating: 4.5,
-    review_count: 8600,
+    rating: 4.6,
+    review_count: 24500,
     availability: true,
-    checked_at: "2026-08-18T11:40:00Z",
+    checked_at: "2026-08-18T11:50:00Z",
     is_demo_source: true,
     is_affiliate_link: true
   },
-  {
-    id: "list_fk_mug",
-    product_id: "prod_coffee_mug",
-    platform_name: "Flipkart",
-    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flipkart_logo.svg",
-    product_url: "https://www.flipkart.com/search?q=Insulated+Coffee+Cup+Mug",
-    seller_name: "HomeDecor Superstore",
-    seller_rating: 4.3,
-    price: 1599,
-    original_price: 2499,
-    offer_price: 1299,
-    discount: "48%",
-    currency: "₹",
-    rating: 4.4,
-    review_count: 5100,
-    availability: true,
-    checked_at: "2026-08-18T11:30:00Z",
-    is_demo_source: true,
-    is_affiliate_link: true
-  },
-  {
-    id: "list_amz_dellxps",
-    product_id: "prod_dell_xps15",
-    platform_name: "Amazon",
-    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
-    product_url: "https://www.amazon.in/s?k=Dell+XPS+15+Laptop",
-    seller_name: "Dell Official Store",
-    seller_rating: 4.9,
-    price: 189990,
-    original_price: 215000,
-    offer_price: 179990,
-    discount: "16%",
-    currency: "₹",
-    rating: 4.7,
-    review_count: 3800,
-    availability: true,
-    checked_at: "2026-08-18T11:55:00Z",
-    is_demo_source: true,
-    is_affiliate_link: true
-  },
+
+  // boAt Rockerz 450
   {
     id: "list_amz_boat450",
     product_id: "prod_boat_rockerz",
@@ -731,26 +900,74 @@ export const STORED_LISTINGS = [
     is_demo_source: true,
     is_affiliate_link: true
   },
+
+  // HP Pavilion 15
   {
-    id: "list_fk_boat450",
-    product_id: "prod_boat_rockerz",
-    platform_name: "Flipkart",
-    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flipkart_logo.svg",
-    product_url: "https://www.flipkart.com/search?q=boAt+Rockerz+450",
-    seller_name: "Audio World",
+    id: "list_amz_hp15",
+    product_id: "prod_hp_pavilion15",
+    platform_name: "Amazon",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    product_url: "https://www.amazon.in/s?k=HP+Pavilion+15+Core+i7+Laptop",
+    seller_name: "Appario Retail Private Ltd",
+    seller_rating: 4.7,
+    price: 64990,
+    original_price: 78000,
+    offer_price: 62990,
+    discount: "19%",
+    currency: "₹",
+    rating: 4.4,
+    review_count: 5400,
+    availability: true,
+    checked_at: "2026-08-18T11:55:00Z",
+    is_demo_source: true,
+    is_affiliate_link: true
+  },
+
+  // Samsung TV 55
+  {
+    id: "list_amz_tv55",
+    product_id: "prod_samsung_tv55",
+    platform_name: "Amazon",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    product_url: "https://www.amazon.in/s?k=Samsung+55+inch+4K+Smart+TV",
+    seller_name: "Dawntech Electronics",
     seller_rating: 4.5,
-    price: 1599,
-    original_price: 3990,
-    offer_price: 1399,
-    discount: "65%",
+    price: 42990,
+    original_price: 64900,
+    offer_price: 39990,
+    discount: "38%",
     currency: "₹",
     rating: 4.3,
-    review_count: 64100,
+    review_count: 12800,
     availability: true,
     checked_at: "2026-08-18T11:45:00Z",
     is_demo_source: true,
     is_affiliate_link: true
   },
+
+  // Coffee Mug
+  {
+    id: "list_amz_mug",
+    product_id: "prod_coffee_mug",
+    platform_name: "Amazon",
+    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    product_url: "https://www.amazon.in/s?k=Insulated+Travel+Coffee+Mug",
+    seller_name: "Kitchen Essentials Hub",
+    seller_rating: 4.6,
+    price: 1499,
+    original_price: 2499,
+    offer_price: 1199,
+    discount: "52%",
+    currency: "₹",
+    rating: 4.5,
+    review_count: 8600,
+    availability: true,
+    checked_at: "2026-08-18T11:40:00Z",
+    is_demo_source: true,
+    is_affiliate_link: true
+  },
+
+  // Philips Air Fryer
   {
     id: "list_amz_airfryer",
     product_id: "prod_philips_airfryer",
@@ -771,26 +988,8 @@ export const STORED_LISTINGS = [
     is_demo_source: true,
     is_affiliate_link: true
   },
-  {
-    id: "list_fk_airfryer",
-    product_id: "prod_philips_airfryer",
-    platform_name: "Flipkart",
-    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flipkart_logo.svg",
-    product_url: "https://www.flipkart.com/search?q=Philips+Digital+Air+Fryer+HD9252",
-    seller_name: "HomeAppliance World",
-    seller_rating: 4.4,
-    price: 9995,
-    original_price: 14995,
-    offer_price: 9495,
-    discount: "37%",
-    currency: "₹",
-    rating: 4.3,
-    review_count: 18400,
-    availability: true,
-    checked_at: "2026-08-18T11:37:00Z",
-    is_demo_source: true,
-    is_affiliate_link: true
-  },
+
+  // Royal Canin Kitten Food
   {
     id: "list_amz_petfood",
     product_id: "prod_pet_kitten_food",
@@ -810,116 +1009,54 @@ export const STORED_LISTINGS = [
     checked_at: "2026-08-18T11:55:00Z",
     is_demo_source: true,
     is_affiliate_link: true
-  },
-  {
-    id: "list_fk_petfood",
-    product_id: "prod_pet_kitten_food",
-    platform_name: "Flipkart",
-    platform_logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flipkart_logo.svg",
-    product_url: "https://www.flipkart.com/search?q=Royal+Canin+Kitten+Dry+Food+2kg",
-    seller_name: "PetMart India",
-    seller_rating: 4.5,
-    price: 1599,
-    original_price: 1799,
-    offer_price: 1449,
-    discount: "19%",
-    currency: "₹",
-    rating: 4.5,
-    review_count: 12600,
-    availability: true,
-    checked_at: "2026-08-18T11:33:00Z",
-    is_demo_source: true,
-    is_affiliate_link: true
   }
 ];
 
 export const STORED_REVIEWS = {
-  prod_iphone16_128gb: {
-    summary: "Most customers praise the smooth A18 performance, camera control key, and exceptional battery life. Minor complaints mention minimal design changes from iPhone 15 and packaging simplicity.",
-    sentiment_breakdown: { positive_percent: 82, neutral_percent: 11, negative_percent: 7 },
-    positives: ["Excellent A18 speed", "Outstanding battery life", "Tactile Camera Control button", "Bright OLED Display"],
-    negatives: ["60Hz refresh rate display", "Minimal aesthetic overhaul", "No charger in box"],
-    neutrals: ["Camera control takes 1-2 days of practice"],
-    sample_reviews: [
-      { id: "rev_1", author: "Rahul S.", rating: 5, sentiment: "positive", date: "2026-08-10", text: "Upgraded from iPhone 12. Battery life easily lasts 1.5 days! The camera control button is super helpful for quick snapshots.", verified: true },
-      { id: "rev_2", author: "Priya M.", rating: 4, sentiment: "positive", date: "2026-08-04", text: "Great phone overall. Fast delivery on Amazon. Only downside is 60Hz display at this price tag.", verified: true }
-    ]
-  },
-  prod_samsung_s25: {
-    summary: "Users love the titanium feel, blazing Snapdragon 8 Gen 4 speed, and Galaxy AI live translate features. Some users note the phone runs warm during heavy gaming.",
-    sentiment_breakdown: { positive_percent: 86, neutral_percent: 9, negative_percent: 5 },
-    positives: ["Fluid 120Hz AMOLED display", "Galaxy AI photo tools", "Premium Titanium chassis", "Superb daylight photography"],
-    negatives: ["Warms up slightly under high gaming load", "Fast charging capped at 25W"],
-    neutrals: ["One UI 7 layout has a slight learning curve"],
-    sample_reviews: [
-      { id: "rev_4", author: "Amit Sharma", rating: 5, sentiment: "positive", date: "2026-08-12", text: "The Galaxy AI tools are brilliant! Screen is remarkably bright even under direct outdoor sunlight.", verified: true }
-    ]
-  },
-  prod_sony_xm5: {
-    summary: "Unrivaled active noise cancellation and supreme comfort for long travel sessions. A few users missed the folding hinge mechanism from the previous XM4 model.",
+  prod_levis_tshirt: {
+    summary: "Customers highlight the breathable cotton fabric, durable graphic print, and comfortable regular fit for everyday wear.",
     sentiment_breakdown: { positive_percent: 88, neutral_percent: 8, negative_percent: 4 },
-    positives: ["Best-in-class Noise Cancellation", "30-hour battery", "Lightweight ergonomic headband", "Mic clarity on video calls"],
-    negatives: ["Does not fold into compact pouch", "Pricey"],
-    neutrals: ["Touch controls are responsive"],
+    positives: ["Soft 100% Cotton", "Fade-resistant print", "Comfortable everyday fit"],
+    negatives: ["Runs slightly small after hot wash"],
+    neutrals: ["Standard wash instructions"],
     sample_reviews: [
-      { id: "rev_5", author: "Kavita R.", rating: 5, sentiment: "positive", date: "2026-08-15", text: "Perfect for flight travel! Silences engine noise completely. Worth every rupee.", verified: true }
+      { id: "rev_t1", author: "Aniket V.", rating: 5, sentiment: "positive", date: "2026-08-14", text: "Great quality cotton t-shirt. Fits true to size and color did not bleed after multiple washes.", verified: true }
     ]
   },
-  prod_hp_pavilion15: {
-    summary: "Excellent productivity laptop with fast 13th Gen Core i7 CPU and B&O speakers. Battery life is moderate (5-6 hours under heavy browsing).",
-    sentiment_breakdown: { positive_percent: 79, neutral_percent: 14, negative_percent: 7 },
-    positives: ["Powerful i7 Processor", "Crisp FHD screen", "B&O tuned audio", "Sleek aluminum chassis"],
-    negatives: ["Average battery life", "Webcam is only 720p"],
-    neutrals: ["Keyboard backlighting has 2 brightness levels"],
-    sample_reviews: []
-  },
-  prod_samsung_tv55: {
-    summary: "Incredible 4K clarity, vibrant colors, and smooth smart TV interface. Sound quality is standard, recommending a soundbar for movie lovers.",
-    sentiment_breakdown: { positive_percent: 84, neutral_percent: 10, negative_percent: 6 },
-    positives: ["Stunning 4K Crystal display", "Slim bezels", "Tizen OS app speed"],
-    negatives: ["Built-in speakers lack deep bass"],
-    neutrals: ["Remote control is solar-powered"],
-    sample_reviews: []
-  },
-  prod_apple_watch_10: {
-    summary: "Users love the razor-thin profile, bright edge-to-edge screen, and rapid 30-minute fast charging.",
+  prod_uspolo_shirt: {
+    summary: "Praised for premium slim tailoring, breathable combed cotton, and versatile look for both formal office and weekend events.",
     sentiment_breakdown: { positive_percent: 90, neutral_percent: 7, negative_percent: 3 },
-    positives: ["Large wide-angle OLED display", "Fast charging", "Advanced health tracking"],
-    negatives: ["Daily charging still required"],
-    neutrals: ["Jet black finish looks sleek"],
+    positives: ["Crisp slim tailoring", "Breathable fabric", "Signature embroidered logo"],
+    negatives: ["Requires ironing after wash"],
+    neutrals: ["Collar stays in place"],
+    sample_reviews: []
+  },
+  prod_iphone16_128gb: {
+    summary: "Most customers praise the smooth A18 performance, camera control key, and exceptional battery life.",
+    sentiment_breakdown: { positive_percent: 82, neutral_percent: 11, negative_percent: 7 },
+    positives: ["Excellent A18 speed", "Outstanding battery life", "Tactile Camera Control button"],
+    negatives: ["60Hz refresh rate display"],
+    neutrals: ["Camera control takes 1-2 days of practice"],
     sample_reviews: []
   }
 };
 
 export const STORED_PRICE_HISTORY = {
+  prod_levis_tshirt: [
+    { date: "2026-07-01", Amazon: 1499, Myntra: 1399, Flipkart: 1499 },
+    { date: "2026-07-20", Amazon: 1299, Myntra: 1199, Flipkart: 1399 },
+    { date: "2026-08-10", Amazon: 1199, Myntra: 1099, Flipkart: 1299 },
+    { date: "2026-08-18", Amazon: 1099, Myntra: 1049, Flipkart: 1199 }
+  ],
+  prod_uspolo_shirt: [
+    { date: "2026-07-01", Amazon: 2499, Myntra: 2399 },
+    { date: "2026-07-20", Amazon: 2099, Myntra: 1999 },
+    { date: "2026-08-18", Amazon: 1749, Myntra: 1699 }
+  ],
   prod_iphone16_128gb: [
-    { date: "2026-07-01", Amazon: 54999, Flipkart: 54999, Croma: 54999 },
-    { date: "2026-07-15", Amazon: 52999, Flipkart: 53499, Croma: 54999 },
-    { date: "2026-08-01", Amazon: 49999, Flipkart: 51499, Croma: 52999 },
-    { date: "2026-08-10", Amazon: 48999, Flipkart: 50999, Croma: 52000 },
-    { date: "2026-08-18", Amazon: 46999, Flipkart: 49999, Croma: 50500 }
-  ],
-  prod_samsung_s25: [
-    { date: "2026-07-01", Amazon: 79999, Flipkart: 79999 },
-    { date: "2026-07-15", Amazon: 76999, Flipkart: 77499 },
-    { date: "2026-08-01", Amazon: 74999, Flipkart: 74999 },
-    { date: "2026-08-18", Amazon: 71999, Flipkart: 72499 }
-  ],
-  prod_sony_xm5: [
-    { date: "2026-07-01", Amazon: 29990, "Reliance Digital": 32990 },
-    { date: "2026-07-20", Amazon: 26990, "Reliance Digital": 28990 },
-    { date: "2026-08-10", Amazon: 24990, "Reliance Digital": 26990 },
-    { date: "2026-08-18", Amazon: 22490, "Reliance Digital": 24990 }
-  ],
-  prod_hp_pavilion15: [
-    { date: "2026-07-01", Amazon: 72990, Croma: 74990 },
-    { date: "2026-07-20", Amazon: 68990, Croma: 70990 },
-    { date: "2026-08-18", Amazon: 62990, Croma: 64500 }
-  ],
-  prod_samsung_tv55: [
-    { date: "2026-07-01", Amazon: 48990, Flipkart: 49990 },
-    { date: "2026-07-20", Amazon: 44990, Flipkart: 46990 },
-    { date: "2026-08-18", Amazon: 39990, Flipkart: 41990 }
+    { date: "2026-07-01", Amazon: 54999, Flipkart: 54999 },
+    { date: "2026-08-01", Amazon: 49999, Flipkart: 51499 },
+    { date: "2026-08-18", Amazon: 46999, Flipkart: 49999 }
   ]
 };
 
@@ -976,8 +1113,8 @@ export const getStoredProductComparison = (productId, priority = "balanced") => 
         seller_rating: 4.7,
         price: 2499,
         original_price: 3499,
-        offer_price: 2199,
-        discount: "37%",
+        offer_price: 1999,
+        discount: "43%",
         currency: "₹",
         rating: 4.5,
         review_count: 5400,
@@ -985,20 +1122,20 @@ export const getStoredProductComparison = (productId, priority = "balanced") => 
         checked_at: new Date().toISOString()
       },
       {
-        id: `list_fk_${product.id}`,
+        id: `list_myntra_${product.id}`,
         product_id: product.id,
-        platform_name: "Flipkart",
-        platform_logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flipkart_logo.svg",
-        product_url: `https://www.flipkart.com/search?q=${encodeURIComponent(product.canonical_name)}`,
-        seller_name: "Retail Partner",
-        seller_rating: 4.4,
+        platform_name: "Myntra",
+        platform_logo: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Myntra_logo.png",
+        product_url: `https://www.myntra.com/${encodeURIComponent(product.canonical_name)}`,
+        seller_name: "Retail Fashion Hub",
+        seller_rating: 4.5,
         price: 2699,
         original_price: 3499,
-        offer_price: 2399,
-        discount: "31%",
+        offer_price: 1899,
+        discount: "45%",
         currency: "₹",
         rating: 4.4,
-        review_count: 3200,
+        review_count: 3800,
         availability: true,
         checked_at: new Date().toISOString()
       }
@@ -1031,18 +1168,18 @@ export const getStoredProductComparison = (productId, priority = "balanced") => 
     ...bestOption,
     recommendation_type: priority === 'cheapest' ? 'CHEAPEST DEAL' : priority === 'best_rated' ? 'HIGHEST RATED' : 'BALANCED CHOICE',
     score: Math.min(98, Math.max(85, Math.round(bestOption.rating * 19 + 5))),
-    explanation: `Offers the best overall combination of competitive pricing at ₹${(bestOption.offer_price || bestOption.price).toLocaleString('en-IN')}, high customer satisfaction (${bestOption.rating}★), and fast verified delivery.`
+    explanation: `Offers the best overall combination of competitive pricing at ₹${(bestOption.offer_price || bestOption.price).toLocaleString('en-IN')}, high customer satisfaction (${bestOption.rating}★), and verified store availability.`
   };
 
   const prices = normalizedListings.map(l => Number(l.offer_price || l.price));
   const reviewAnalysis = STORED_REVIEWS[product.id] || {
-    summary: `High customer satisfaction for ${product.canonical_name} across major authorized retail partners with high build quality and reliable performance.`,
-    sentiment_breakdown: { positive_percent: 85, neutral_percent: 10, negative_percent: 5 },
-    positives: ["High build quality", "Fast delivery", "Competitive pricing", "Accurate specifications"],
-    negatives: ["Limited color availability in some regions"],
-    neutrals: ["Standard manufacturer warranty applies"],
+    summary: `High customer satisfaction for ${product.canonical_name} across major verified retail partners with premium quality and reliable delivery.`,
+    sentiment_breakdown: { positive_percent: 88, neutral_percent: 8, negative_percent: 4 },
+    positives: ["Premium quality material", "True to fit & size", "Fast delivery across stores"],
+    negatives: ["Popular colors sell out quickly"],
+    neutrals: ["Standard manufacturer return policy applies"],
     sample_reviews: [
-      { id: "rev_gen_1", author: "Verified Customer", rating: 5, sentiment: "positive", date: "2026-08-10", text: `Great experience with this ${product.canonical_name}. Exactly as described and great value.`, verified: true }
+      { id: "rev_gen_1", author: "Verified Buyer", rating: 5, sentiment: "positive", date: "2026-08-10", text: `Superb quality ${product.canonical_name}. Exactly as shown and arrived in top condition.`, verified: true }
     ]
   };
 
@@ -1061,7 +1198,7 @@ export const getStoredProductComparison = (productId, priority = "balanced") => 
       ];
 
   const related = STORED_PRODUCTS
-    .filter(p => p.id !== product.id)
+    .filter(p => p.id !== product.id && (p.category === product.category || true))
     .slice(0, 8)
     .map(p => {
       const pListings = STORED_LISTINGS.filter(l => l.product_id === p.id);
@@ -1098,42 +1235,66 @@ export const getStoredProductComparison = (productId, priority = "balanced") => 
 export const searchStoredProducts = (query = "", page = 1) => {
   const rawQuery = (query || "").trim();
   const clean = rawQuery.toLowerCase();
-  let matchedProducts = STORED_PRODUCTS;
+  
+  let exactMatches = [];
+  let categoryMatches = [];
 
   if (clean) {
     const terms = clean.split(/\s+/).filter(Boolean);
-    const scored = STORED_PRODUCTS.map(p => {
-      const target = `${p.canonical_name} ${p.brand} ${p.model} ${p.category} ${p.description}`.toLowerCase();
-      let score = 0;
-      for (const term of terms) {
-        if (target.includes(term)) score += 1;
-        if (p.brand.toLowerCase() === term) score += 3;
-        if (p.category.toLowerCase().includes(term)) score += 2;
-      }
-      return { product: p, score };
-    }).filter(item => item.score > 0);
 
-    if (scored.length > 0) {
-      scored.sort((a, b) => b.score - a.score);
-      matchedProducts = scored.map(s => s.product);
+    // 1. Check exact or partial text matches
+    exactMatches = STORED_PRODUCTS.filter(p => {
+      const target = `${p.canonical_name} ${p.brand} ${p.model} ${p.category} ${p.description}`.toLowerCase();
+      return terms.some(term => {
+        // Handle common plurals/singulars like shirt / shirts, shoe / shoes, watch / watches
+        const singular = term.replace(/s$/, '').replace(/es$/, '');
+        return target.includes(term) || (singular.length > 2 && target.includes(singular));
+      });
+    });
+
+    // 2. If matched items have a category, find all similar items in that category
+    if (exactMatches.length > 0) {
+      const primaryCategory = exactMatches[0].category;
+      categoryMatches = STORED_PRODUCTS.filter(p => 
+        p.category === primaryCategory && !exactMatches.some(m => m.id === p.id)
+      );
     } else {
-      matchedProducts = STORED_PRODUCTS;
+      // 3. If term relates to fashion / tech / kitchen keywords
+      if (clean.includes('shirt') || clean.includes('cloth') || clean.includes('wear') || clean.includes('jean') || clean.includes('dress') || clean.includes('pant') || clean.includes('tee')) {
+        exactMatches = STORED_PRODUCTS.filter(p => p.category === "Fashion & Apparel");
+      } else if (clean.includes('shoe') || clean.includes('sneaker') || clean.includes('boot') || clean.includes('footwear')) {
+        exactMatches = STORED_PRODUCTS.filter(p => p.category === "Footwear & Shoes");
+      } else if (clean.includes('watch') || clean.includes('time') || clean.includes('smartwatch')) {
+        exactMatches = STORED_PRODUCTS.filter(p => p.category === "Smartwatches & Watches");
+      } else if (clean.includes('laptop') || clean.includes('computer') || clean.includes('macbook') || clean.includes('pc')) {
+        exactMatches = STORED_PRODUCTS.filter(p => p.category === "Laptops & Computers");
+      } else if (clean.includes('phone') || clean.includes('mobile') || clean.includes('iphone') || clean.includes('samsung')) {
+        exactMatches = STORED_PRODUCTS.filter(p => p.category === "Smartphones");
+      } else if (clean.includes('headphone') || clean.includes('audio') || clean.includes('earphone') || clean.includes('music')) {
+        exactMatches = STORED_PRODUCTS.filter(p => p.category === "Headphones & Audio");
+      } else if (clean.includes('tv') || clean.includes('television') || clean.includes('screen') || clean.includes('display')) {
+        exactMatches = STORED_PRODUCTS.filter(p => p.category === "Televisions");
+      }
     }
   }
 
-  const pageSize = 12;
-  const start = (page - 1) * pageSize;
-  const pagedProducts = matchedProducts.slice(start, start + pageSize);
+  // Combine exact matches first, then similar category items, and fill with catalog
+  let allMatched = [...exactMatches, ...categoryMatches];
+  
+  if (allMatched.length < 6) {
+    const remaining = STORED_PRODUCTS.filter(p => !allMatched.some(m => m.id === p.id));
+    allMatched = [...allMatched, ...remaining];
+  }
 
   const candidateProducts = [];
   const products = [];
   const sources = new Set();
 
-  for (const p of matchedProducts) {
+  for (const p of allMatched) {
     const pListings = STORED_LISTINGS.filter(l => l.product_id === p.id);
     const best = pListings[0] || {};
-    const price = best.offer_price || best.price || 1999;
-    const oldPrice = best.original_price || best.price || 2499;
+    const price = best.offer_price || best.price || 1499;
+    const oldPrice = best.original_price || best.price || 1999;
     const store = best.platform_name || "Amazon";
     sources.add(store);
 
@@ -1160,26 +1321,26 @@ export const searchStoredProducts = (query = "", page = 1) => {
       product_url: best.product_url || `https://www.amazon.in/s?k=${encodeURIComponent(p.canonical_name)}`,
       availability: true,
       seller: best.seller_name || "Official Store",
-      discount: best.discount || "15%"
+      discount: best.discount || "25%"
     };
 
     candidateProducts.push(itemObj);
     products.push(itemObj);
   }
 
-  const primaryProduct = matchedProducts[0] || STORED_PRODUCTS[0];
+  const primaryProduct = allMatched[0] || STORED_PRODUCTS[0];
   const comparison = getStoredProductComparison(primaryProduct.id);
 
   return {
     query: rawQuery || primaryProduct.canonical_name,
-    count: matchedProducts.length,
+    count: candidateProducts.length,
     matched_product: primaryProduct,
     candidate_products: candidateProducts,
     products,
     comparison,
-    totalResults: matchedProducts.length,
-    page,
-    hasMore: matchedProducts.length > (start + pageSize),
+    totalResults: candidateProducts.length,
+    page: 1,
+    hasMore: false,
     sources: Array.from(sources),
     providerNotice: null
   };
@@ -1188,20 +1349,29 @@ export const searchStoredProducts = (query = "", page = 1) => {
 export const getStoredSuggestions = (query = "") => {
   const clean = (query || "").toLowerCase().trim();
   const allSuggestions = [
+    { name: "Levi's Men's Graphic Crew Neck T-Shirt", category: "Fashion & Apparel", brand: "Levi's" },
+    { name: "U.S. Polo Assn. Men's Solid Casual Cotton Shirt", category: "Fashion & Apparel", brand: "U.S. Polo Assn." },
+    { name: "Tommy Hilfiger Men's Classic Pique Polo T-Shirt", category: "Fashion & Apparel", brand: "Tommy Hilfiger" },
+    { name: "Zara Men's Relaxed Fit 100% Pure Linen Shirt", category: "Fashion & Apparel", brand: "Zara" },
+    { name: "Roadster Men's Washed Indigo Denim Shirt", category: "Fashion & Apparel", brand: "Roadster" },
+    { name: "Allen Solly Men's Formal Cotton Shirt", category: "Fashion & Apparel", brand: "Allen Solly" },
+    { name: "H&M Men's Regular Fit Organic Cotton T-Shirt (3-Pack)", category: "Fashion & Apparel", brand: "H&M" },
+    { name: "Levi's 501 Original Fit Men's Jeans", category: "Fashion & Apparel", brand: "Levi's" },
     { name: "Apple iPhone 16 (128 GB)", category: "Smartphones", brand: "Apple" },
     { name: "Samsung Galaxy S25 5G", category: "Smartphones", brand: "Samsung" },
+    { name: "OnePlus 12 5G (512GB)", category: "Smartphones", brand: "OnePlus" },
+    { name: "Nike Air Force 1 '07 Sneakers", category: "Footwear & Shoes", brand: "Nike" },
+    { name: "Adidas Ultraboost Light Running Shoes", category: "Footwear & Shoes", brand: "Adidas" },
+    { name: "Apple Watch Series 10 Smartwatch", category: "Smartwatches", brand: "Apple" },
+    { name: "Samsung Galaxy Watch 7 (44mm)", category: "Smartwatches", brand: "Samsung" },
     { name: "Sony WH-1000XM5 Wireless Headphones", category: "Audio", brand: "Sony" },
+    { name: "boAt Rockerz 450 Bluetooth Headphones", category: "Audio", brand: "boAt" },
     { name: "HP Pavilion 15 Core i7 Laptop", category: "Laptops", brand: "HP" },
     { name: "Dell XPS 15 OLED Laptop", category: "Laptops", brand: "Dell" },
     { name: "Samsung 55 inch Crystal 4K Smart TV", category: "Televisions", brand: "Samsung" },
-    { name: "Apple Watch Series 10 Smartwatch", category: "Smartwatches", brand: "Apple" },
-    { name: "Nike Air Force 1 '07 Sneakers", category: "Footwear & Shoes", brand: "Nike" },
-    { name: "Levi's Men's Graphic Crew Neck T-Shirt", category: "Fashion", brand: "Levi's" },
-    { name: "Levi's 501 Original Fit Men's Jeans", category: "Fashion", brand: "Levi's" },
     { name: "Philips Digital Air Fryer (4.1L)", category: "Home & Kitchen", brand: "Philips" },
     { name: "Ceramic Insulated Travel Coffee Mug & Cup", category: "Kitchen & Dining", brand: "Contigo" },
-    { name: "Royal Canin Kitten Dry Food & Care Kit", category: "Pet Supplies", brand: "Royal Canin" },
-    { name: "boAt Rockerz 450 Bluetooth Headphones", category: "Audio", brand: "boAt" }
+    { name: "Royal Canin Kitten Dry Food & Care Kit", category: "Pet Supplies", brand: "Royal Canin" }
   ];
 
   if (!clean) {
@@ -1216,5 +1386,5 @@ export const getStoredSuggestions = (query = "") => {
 
   return matched.length > 0
     ? matched.map(s => s.name)
-    : allSuggestions.slice(0, 8).map(s => s.name);
+    : allSuggestions.slice(0, 10).map(s => s.name);
 };
