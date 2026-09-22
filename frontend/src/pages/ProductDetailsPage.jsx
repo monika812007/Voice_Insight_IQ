@@ -122,6 +122,7 @@ export const ProductDetailsPage = () => {
                             productUrl={bestOption?.product_url}
                             providerProductToken={bestOption?.provider_product_token}
                             merchant={bestOption?.platform_name}
+                            productName={product.canonical_name || bestOption?.title}
                             className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-500 px-5 py-3.5 font-bold text-slate-950 hover:brightness-110 transition"
                         >
                             Buy Now

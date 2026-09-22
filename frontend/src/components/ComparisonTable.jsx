@@ -70,6 +70,7 @@ export const ComparisonTable = ({ listings }) => {
                       productUrl={l.product_url}
                       providerProductToken={l.provider_product_token}
                       merchant={l.platform_name}
+                      productName={l.title || l.canonical_name}
                       className="inline-flex items-center space-x-1.5 px-4 py-2 bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs rounded-xl shadow transition"
                     />
                   </td>
@@ -124,6 +125,7 @@ export const ComparisonTable = ({ listings }) => {
                 productUrl={l.product_url}
                 providerProductToken={l.provider_product_token}
                 merchant={l.platform_name}
+                productName={l.title || l.canonical_name}
                 className="w-full py-2.5 bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs rounded-xl flex items-center justify-center space-x-1.5 transition"
               >
                 BUY NOW ON {l.platform_name.toUpperCase()}

@@ -60,6 +60,7 @@ export const RelatedProductsGrid = ({ products = [], onSelectProduct }) => {
                 productUrl={p.product_url}
                 providerProductToken={p.providerProductToken || p.provider_product_token}
                 merchant={p.source}
+                productName={p.canonical_name || p.title}
                 className="inline-flex items-center gap-1 text-xs font-bold text-cyan-400 hover:text-cyan-300"
               >
                 Buy Now

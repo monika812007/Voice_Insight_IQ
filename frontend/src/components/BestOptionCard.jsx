@@ -107,6 +107,7 @@ export const BestOptionCard = ({ bestOption }) => {
             productUrl={product_url}
             providerProductToken={provider_product_token}
             merchant={platform_name}
+            productName={bestOption.title || bestOption.canonical_name}
             className="w-full py-3.5 px-6 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-extrabold text-base rounded-xl shadow-lg shadow-emerald-500/25 transition duration-200 flex items-center justify-center space-x-2 group"
           >
             BUY NOW ON {(platform_name || '').toUpperCase()}
